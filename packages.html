@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-bs-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packages &amp; Investment - LumiFrame Studio</title>
+  <meta name="description" content="Transparent pricing and heirloom portrait session packages for families, newborns, maternity, corporate headshots, and fine art wall displays.">
+  <link rel="icon" type="image/png" href="assets/images/common/lumi_icon.png">
+
+  <!-- Bootstrap 5 & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Modular Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/banner.css">
+  <link rel="stylesheet" href="assets/css/cards.css">
+  <link rel="stylesheet" href="assets/css/buttons.css">
+  <link rel="stylesheet" href="assets/css/forms.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+  <link rel="stylesheet" href="assets/css/light-theme.css">
+  <link rel="stylesheet" href="assets/css/dark-theme.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/desktop.css">
+  <link rel="stylesheet" href="assets/css/laptop.css">
+  <link rel="stylesheet" href="assets/css/tablet.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <link rel="stylesheet" href="assets/css/responsive-patch.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="header-brand">
+        <img src="assets/images/common/lumi_logo.png" alt="LumiFrame Studio Logo" class="brand-logo">
+        <span class="brand-name">LumiFrame Studio</span>
+      </a>
+
+      <nav class="d-none d-xl-block">
+        <ul class="main-nav">
+          <li><a href="index.html" class="nav-link">Home 1</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="packages.html" class="nav-link active">Packages</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button type="button" class="icon-toggle-btn theme-toggle-btn d-none d-xl-inline-flex" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <button type="button" class="icon-toggle-btn rtl-toggle-btn d-none d-xl-inline-flex" title="Toggle RTL/LTR"><span class="rtl-label" style="font-size:0.75rem; font-weight:700;">RTL</span></button>
+        <a href="login.html" class="btn btn-header-login d-none d-xl-inline-flex"><i class="bi bi-person-fill"></i> Login</a>
+        <button type="button" class="hamburger-btn" aria-label="Open Navigation Menu"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div class="nav-backdrop"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+        <img src="assets/images/common/lumi_logo.png" alt="LumiFrame Studio" style="height:36px;">
+        <span class="font-heading fw-bold" style="font-size:1.15rem; color:var(--heading-color);">LumiFrame Studio</span>
+      </a>
+      <button type="button" class="close-drawer-btn"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="nav-link">Home 1</a></li>
+      <li><a href="home2.html" class="nav-link">Home 2</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+      <li><a href="packages.html" class="nav-link active">Packages</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <div class="mobile-drawer-toggles">
+        <button type="button" class="icon-toggle-btn theme-toggle-btn"><i class="bi bi-moon-stars-fill"></i></button>
+        <button type="button" class="icon-toggle-btn rtl-toggle-btn"><span class="rtl-label" style="font-size:0.75rem; font-weight:700;">RTL</span></button>
+      </div>
+      <a href="login.html" class="btn btn-primary-gold w-100 mt-2"><i class="bi bi-person-fill"></i> Login</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Compact Banner -->
+    <section class="site-banner inner-banner" style="background-image: url('assets/images/packages/banner.jpg');">
+      <div class="banner-overlay"></div>
+      <div class="container banner-content">
+        <span class="banner-subtitle animate-fade-up">Transparent Investment</span>
+        <h1 class="banner-title animate-fade-up">Session Packages &amp; Pricing</h1>
+        <ul class="banner-breadcrumb animate-fade-up">
+          <li><a href="index.html">Home</a></li>
+          <li class="separator">/</li>
+          <li class="active">Packages</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 1: Family Session Packages -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Generational Art</span>
+          <h2 class="section-title">1. Family Session Packages</h2>
+          <p class="section-description">Heirloom portrait collections designed for parents, children, and extended family reunions.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-6 animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/packages/pkg-family.jpg" alt="Heirloom Family Collection">
+              </div>
+              <div class="card-body-custom">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="card-title-custom mb-0">Heirloom Family Collection</h3>
+                  <span class="card-price-amount">$850</span>
+                </div>
+                <ul class="card-meta-list my-3">
+                  <li><i class="bi bi-clock-history"></i> <strong>Session Duration:</strong> 2 Hours (Studio &amp; Garden)</li>
+                  <li><i class="bi bi-image"></i> <strong>Edited Images:</strong> 25 High-Resolution Files</li>
+                  <li><i class="bi bi-person-workspace"></i> <strong>Outfit &amp; Location:</strong> 2 Outfits / 2 Sets</li>
+                  <li><i class="bi bi-calendar-check"></i> <strong>Delivery Timeline:</strong> 10 Business Days</li>
+                </ul>
+                <div class="card-footer-custom">
+                  <a href="contact.html?package=family-heirloom" class="btn btn-primary-gold">Book Family Session</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Newborn Session Packages -->
+    <section class="section-padding bg-surface-secondary">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Precious First Days</span>
+          <h2 class="section-title">2. Newborn Session Packages</h2>
+          <p class="section-description">Gentle, safe studio sessions conducting within the first 14 days of birth.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-6 animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/packages/pkg-newborn.jpg" alt="Pure Wonder Newborn Package">
+              </div>
+              <div class="card-body-custom">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="card-title-custom mb-0">Pure Wonder Newborn</h3>
+                  <span class="card-price-amount">$950</span>
+                </div>
+                <ul class="card-meta-list my-3">
+                  <li><i class="bi bi-clock-history"></i> <strong>Session Duration:</strong> 3 Hours (Feeding Breaks Included)</li>
+                  <li><i class="bi bi-image"></i> <strong>Edited Images:</strong> 20 High-Resolution Files</li>
+                  <li><i class="bi bi-box-seam"></i> <strong>Outfit &amp; Props:</strong> Unlimited Wraps &amp; Baskets Included</li>
+                  <li><i class="bi bi-calendar-check"></i> <strong>Delivery Timeline:</strong> 12 Business Days</li>
+                </ul>
+                <div class="card-footer-custom">
+                  <a href="contact.html?package=newborn-wonder" class="btn btn-primary-gold">Book Newborn Session</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Maternity Session Packages -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Motherhood Radiance</span>
+          <h2 class="section-title">3. Maternity Session Packages</h2>
+          <p class="section-description">Luxury fine art sessions celebrating your pregnancy journey.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-6 animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/packages/pkg-maternity.jpg" alt="Goddess Maternity Package">
+              </div>
+              <div class="card-body-custom">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="card-title-custom mb-0">Goddess Maternity Collection</h3>
+                  <span class="card-price-amount">$750</span>
+                </div>
+                <ul class="card-meta-list my-3">
+                  <li><i class="bi bi-clock-history"></i> <strong>Session Duration:</strong> 90 Mins</li>
+                  <li><i class="bi bi-image"></i> <strong>Edited Images:</strong> 18 High-Resolution Files</li>
+                  <li><i class="bi bi-door-open"></i> <strong>Wardrobe Closet:</strong> 3 Studio Gown Selections</li>
+                  <li><i class="bi bi-calendar-check"></i> <strong>Delivery Timeline:</strong> 7 Business Days</li>
+                </ul>
+                <div class="card-footer-custom">
+                  <a href="contact.html?package=maternity-goddess" class="btn btn-primary-gold">Book Maternity Session</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Corporate Headshot Packages -->
+    <section class="section-padding bg-surface-secondary">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Executive Identity</span>
+          <h2 class="section-title">4. Corporate Headshot Packages</h2>
+          <p class="section-description">High-impact headshots for business leaders and company team directories.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-6 animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/packages/pkg-corporate.jpg" alt="Executive Headshot Package">
+              </div>
+              <div class="card-body-custom">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="card-title-custom mb-0">Executive Headshot Suite</h3>
+                  <span class="card-price-amount">$350</span>
+                </div>
+                <ul class="card-meta-list my-3">
+                  <li><i class="bi bi-clock-history"></i> <strong>Session Duration:</strong> 45 Mins</li>
+                  <li><i class="bi bi-image"></i> <strong>Edited Images:</strong> 5 Fully Retouched Digitals</li>
+                  <li><i class="bi bi-person-fill-gear"></i> <strong>Outfit &amp; Background:</strong> 2 Outfits / 2 Studio Colors</li>
+                  <li><i class="bi bi-lightning-fill"></i> <strong>Delivery Timeline:</strong> 48-Hour Fast Express</li>
+                </ul>
+                <div class="card-footer-custom">
+                  <a href="contact.html?package=corporate-exec" class="btn btn-primary-gold">Book Headshot Session</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Outdoor Photography Packages -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Natural Light Magic</span>
+          <h2 class="section-title">5. Outdoor Photography Packages</h2>
+          <p class="section-description">Scenic coastal, meadow, and urban architectural outdoor portrait sessions.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-6 animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/packages/pkg-outdoor.jpg" alt="Golden Light Outdoor Package">
+              </div>
+              <div class="card-body-custom">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="card-title-custom mb-0">Golden Light Outdoor Session</h3>
+                  <span class="card-price-amount">$790</span>
+                </div>
+                <ul class="card-meta-list my-3">
+                  <li><i class="bi bi-clock-history"></i> <strong>Session Duration:</strong> 2 Hours (Golden Hour)</li>
+                  <li><i class="bi bi-image"></i> <strong>Edited Images:</strong> 22 High-Resolution Files</li>
+                  <li><i class="bi bi-geo-alt-fill"></i> <strong>Location Allowance:</strong> 1 Curated Scenic Park or Coast</li>
+                  <li><i class="bi bi-calendar-check"></i> <strong>Delivery Timeline:</strong> 10 Business Days</li>
+                </ul>
+                <div class="card-footer-custom">
+                  <a href="contact.html?package=outdoor-golden" class="btn btn-primary-gold">Book Outdoor Session</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Package Comparison Table -->
+    <section class="section-padding bg-surface-secondary">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Compare Inclusions</span>
+          <h2 class="section-title">Package Features Comparison</h2>
+          <p class="section-description">Side-by-side view of inclusions across our Silver, Gold, and Platinum Heirloom Tiers.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="table-responsive animate-fade-up">
+          <table class="table table-bordered table-striped align-middle text-center" style="background:var(--bg-surface); color:var(--text-main);">
+            <thead class="table-dark">
+              <tr>
+                <th class="text-start p-3">Feature / Inclusions</th>
+                <th class="p-3">Silver Tier ($450)</th>
+                <th class="p-3 text-gold">Gold Heirloom ($850)</th>
+                <th class="p-3">Platinum Custom ($1,450)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-start fw-bold">Session Duration</td>
+                <td>60 Minutes</td>
+                <td>2 Hours</td>
+                <td>Full Day (4+ Hours)</td>
+              </tr>
+              <tr>
+                <td class="text-start fw-bold">Retouched Digital Files</td>
+                <td>10 Images</td>
+                <td>25 Images</td>
+                <td>All Digitals (40+)</td>
+              </tr>
+              <tr>
+                <td class="text-start fw-bold">Studio Suite &amp; Outdoor</td>
+                <td>Studio Only</td>
+                <td>Studio + Outdoor Garden</td>
+                <td>Multi-Location &amp; Studio</td>
+              </tr>
+              <tr>
+                <td class="text-start fw-bold">Wardrobe Closet Access</td>
+                <td>1 Outfit</td>
+                <td>2 Outfits</td>
+                <td>Unlimited Outfits</td>
+              </tr>
+              <tr>
+                <td class="text-start fw-bold">Fine Art Canvas Print</td>
+                <td><i class="bi bi-dash"></i></td>
+                <td>16x24 Framed Canvas</td>
+                <td>24x36 Museum Acrylic</td>
+              </tr>
+              <tr>
+                <td class="text-start fw-bold">Italian Leather Album</td>
+                <td><i class="bi bi-dash"></i></td>
+                <td>8x8 Flush Mount Album</td>
+                <td>12x12 Custom Album</td>
+              </tr>
+              <tr>
+                <td class="text-start fw-bold">Hair &amp; Makeup Artist</td>
+                <td>Optional Add-on</td>
+                <td>Optional Add-on</td>
+                <td>Included On-Set</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: Add-on Services -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Enhance Your Experience</span>
+          <h2 class="section-title">Add-on Services &amp; Upgrades</h2>
+          <p class="section-description">Customize your portrait package with luxury physical products and artistry styling.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row g-4 row-cols-1 row-cols-md-3">
+          <div class="col animate-fade-up">
+            <div class="card-custom text-center p-4">
+              <img src="assets/images/packages/addon-album.jpg" alt="Italian Leather Album" class="rounded mb-3 img-fluid">
+              <h3 class="h4 card-title-custom">Italian Leather Album</h3>
+              <p class="card-text-custom">Flush-mount lay-flat pages crafted with real Italian nappa leather binding.</p>
+              <span class="text-gold fw-bold display-6">$350</span>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom text-center p-4">
+              <img src="assets/images/packages/addon-canvas.jpg" alt="Acrylic Wall Canvas" class="rounded mb-3 img-fluid">
+              <h3 class="h4 card-title-custom">Acrylic Wall Canvas</h3>
+              <p class="card-text-custom">HD metallic photo print face-mounted under 1/4" polished optical acrylic.</p>
+              <span class="text-gold fw-bold display-6">$280</span>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom text-center p-4">
+              <img src="assets/images/packages/addon-makeup.jpg" alt="Pro Hair & Makeup" class="rounded mb-3 img-fluid">
+              <h3 class="h4 card-title-custom">Pro Hair &amp; Makeup Artistry</h3>
+              <p class="card-text-custom">On-site professional makeup and hair styling in our private green room.</p>
+              <span class="text-gold fw-bold display-6">$195</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8 (CTA SECTION): Package Booking CTA -->
+    <section class="section-padding text-center position-relative overflow-hidden" style="background: url('assets/images/packages/cta-bg.jpg') center/cover no-repeat;">
+      <div class="banner-overlay" style="opacity:0.85;"></div>
+      <div class="container position-relative z-2">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 animate-fade-up">
+            <span class="section-subtitle text-gold">Ready to Reserve?</span>
+            <h2 class="text-white font-heading display-5 fw-bold mb-3">Book Your Preferred Photography Package</h2>
+            <p class="text-light mb-4 lead-text">Lock in your preferred date on our calendar today.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="contact.html" class="btn btn-primary-gold"><i class="bi bi-calendar-check-fill"></i> Select Package &amp; Book Date</a>
+              <a href="portfolio.html" class="btn btn-outline-gold text-white"><i class="bi bi-images"></i> View Portfolio Gallery</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="assets/images/common/lumi_logo.png" alt="LumiFrame Studio" class="footer-brand-img mb-0">
+            <span class="font-heading fw-bold text-white fs-4">LumiFrame Studio</span>
+          </div>
+          <p class="footer-desc">LumiFrame Studio is a premier portrait photography studio dedicated to creating heirloom fine art imagery for families, newborns, maternity, and business leaders.</p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="social-icon-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-icon-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html">About Studio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h3 class="footer-heading">Photography Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html">Family Legacy Portraits</a></li>
+            <li><a href="services.html">Newborn &amp; Infant Art</a></li>
+            <li><a href="services.html">Maternity Fine Art</a></li>
+            <li><a href="services.html">Children &amp; Milestones</a></li>
+            <li><a href="services.html">Couples &amp; Engagements</a></li>
+            <li><a href="services.html">Executive Headshots</a></li>
+            <li><a href="services.html">Personal Branding</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h3 class="footer-heading">Studio Info &amp; Hours</h3>
+          <ul class="footer-contact-info mb-3">
+            <li><i class="bi bi-geo-alt-fill"></i> 450 Portrait Way, Suite 800, San Francisco, CA</li>
+            <li><i class="bi bi-telephone-fill"></i> +1 (415) 890-3421</li>
+            <li><i class="bi bi-envelope-fill"></i> concierge@lumiframestudio.com</li>
+            <li><i class="bi bi-clock-fill"></i> Tue - Sun: 9:00 AM - 6:00 PM (Mon Closed)</li>
+          </ul>
+          <form class="footer-newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 LumiFrame Studio. All Rights Reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Studio Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/portfolio.js"></script>
+  <script src="assets/js/booking.js"></script>
+</body>
+</html>

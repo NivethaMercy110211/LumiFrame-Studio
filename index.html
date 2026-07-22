@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-bs-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LumiFrame Studio - Luxury Photography &amp; Portrait Service</title>
+  <meta name="description" content="LumiFrame Studio is a premier portrait photography studio offering fine-art family, newborn, maternity, corporate headshots, and personal branding portraiture.">
+  <link rel="icon" type="image/png" href="assets/images/common/lumi_icon.png">
+
+  <!-- Bootstrap 5 & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Modular Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/banner.css">
+  <link rel="stylesheet" href="assets/css/cards.css">
+  <link rel="stylesheet" href="assets/css/buttons.css">
+  <link rel="stylesheet" href="assets/css/forms.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+  <link rel="stylesheet" href="assets/css/light-theme.css">
+  <link rel="stylesheet" href="assets/css/dark-theme.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/desktop.css">
+  <link rel="stylesheet" href="assets/css/laptop.css">
+  <link rel="stylesheet" href="assets/css/tablet.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <link rel="stylesheet" href="assets/css/responsive-patch.css">
+</head>
+<body>
+
+  <!-- Sticky Full-Width Navbar -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="header-brand" id="headerLogoLink">
+        <img src="assets/images/common/lumi_logo.png" alt="LumiFrame Studio Logo" class="brand-logo">
+        <span class="brand-name">LumiFrame Studio</span>
+      </a>
+
+      <nav class="d-none d-xl-block">
+        <ul class="main-nav">
+          <li><a href="index.html" class="nav-link">Home 1</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="packages.html" class="nav-link">Packages</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button type="button" class="icon-toggle-btn theme-toggle-btn d-none d-xl-inline-flex" title="Toggle Theme" id="themeToggleBtn">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button type="button" class="icon-toggle-btn rtl-toggle-btn d-none d-xl-inline-flex" title="Toggle RTL/LTR" id="rtlToggleBtn">
+          <span class="rtl-label" style="font-size:0.75rem; font-weight:700;">RTL</span>
+        </button>
+        <a href="login.html" class="btn btn-header-login d-none d-xl-inline-flex" id="headerLoginBtn">
+          <i class="bi bi-person-fill"></i> Login
+        </a>
+        <button type="button" class="hamburger-btn" aria-label="Open Navigation Menu" id="mobileNavBtn">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div class="nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+        <img src="assets/images/common/lumi_logo.png" alt="LumiFrame Studio" style="height:36px;">
+        <span class="font-heading fw-bold" style="font-size:1.15rem; color:var(--heading-color);">LumiFrame Studio</span>
+      </a>
+      <button type="button" class="close-drawer-btn" id="closeDrawerBtn"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="nav-link">Home 1</a></li>
+      <li><a href="home2.html" class="nav-link">Home 2</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+      <li><a href="packages.html" class="nav-link">Packages</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <div class="mobile-drawer-toggles">
+        <button type="button" class="icon-toggle-btn theme-toggle-btn"><i class="bi bi-moon-stars-fill"></i></button>
+        <button type="button" class="icon-toggle-btn rtl-toggle-btn"><span class="rtl-label" style="font-size:0.75rem; font-weight:700;">RTL</span></button>
+      </div>
+      <a href="login.html" class="btn btn-primary-gold w-100 mt-2"><i class="bi bi-person-fill"></i> Login</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Universal Hero Banner -->
+    <section class="site-banner hero-banner" style="background-image: url('assets/images/home1/hero-banner.jpg');">
+      <div class="banner-overlay"></div>
+      <div class="container banner-content">
+        <div class="row align-items-center">
+          <div class="col-lg-8 col-md-10">
+            <span class="banner-subtitle animate-fade-up">LumiFrame Fine Art Portrait Studio</span>
+            <h1 class="banner-title animate-fade-up">Capturing Emotional &amp; Timeless Memories</h1>
+            <p class="banner-lead animate-fade-up">Exclusive indoor studio sessions and breathtaking outdoor location portraiture for families, newborns, maternity, and corporate leaders.</p>
+            <div class="banner-cta-group animate-fade-up">
+              <a href="contact.html" class="btn btn-primary-gold"><i class="bi bi-calendar-check-fill"></i> Book a Session</a>
+              <a href="portfolio.html" class="btn btn-outline-gold"><i class="bi bi-images"></i> Explore Portfolio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: Featured Portrait Categories -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Specialized Portraiture</span>
+          <h2 class="section-title">Featured Portrait Categories</h2>
+          <p class="section-description">Every milestone deserves to be preserved in fine-art legacy quality. Discover our core photography specializations.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4 featured-category-grid">
+          <div class="col animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/home1/cat-family.jpg" alt="Family Portraiture">
+              </div>
+              <div class="card-body-custom">
+                <span class="badge-tag card-tag">Family Collection</span>
+                <h3 class="card-title-custom">Family Portraits</h3>
+                <p class="card-text-custom">Capturing spontaneous warmth, generational connections, and joyful laughter in studio or outdoors.</p>
+                <div class="card-footer-custom">
+                  <a href="services.html" class="btn btn-outline-gold">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/home1/cat-newborn.jpg" alt="Newborn Fine Art">
+              </div>
+              <div class="card-body-custom">
+                <span class="badge-tag card-tag">First Days</span>
+                <h3 class="card-title-custom">Newborn Fine Art</h3>
+                <p class="card-text-custom">Safe, peaceful, and artistic studio posing in warm private rooms tailored for precious infants.</p>
+                <div class="card-footer-custom">
+                  <a href="services.html" class="btn btn-outline-gold">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/home1/cat-maternity.jpg" alt="Maternity Portraiture">
+              </div>
+              <div class="card-body-custom">
+                <span class="badge-tag card-tag">Motherhood</span>
+                <h3 class="card-title-custom">Maternity Portraits</h3>
+                <p class="card-text-custom">Celebrating the grace of new life with luxury studio gowns and delicate chiaroscuro lighting.</p>
+                <div class="card-footer-custom">
+                  <a href="services.html" class="btn btn-outline-gold">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/home1/cat-corporate.jpg" alt="Corporate Headshots">
+              </div>
+              <div class="card-body-custom">
+                <span class="badge-tag card-tag">Executive Image</span>
+                <h3 class="card-title-custom">Corporate Headshots</h3>
+                <p class="card-text-custom">High-impact personal branding and executive team headshots designed for leadership confidence.</p>
+                <div class="card-footer-custom">
+                  <a href="services.html" class="btn btn-outline-gold">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Signature Photography Services -->
+    <section class="section-padding bg-surface-secondary">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Crafting Experiences</span>
+          <h2 class="section-title">Signature Photography Services</h2>
+          <p class="section-description">We combine technical mastery with creative intuition across bespoke studio and location settings.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row g-4 row-cols-1 row-cols-md-3">
+          <div class="col animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/home1/service-indoor.jpg" alt="Indoor Studio Suite">
+              </div>
+              <div class="card-body-custom">
+                <div class="card-icon-box"><i class="bi bi-camera-reels-fill"></i></div>
+                <h3 class="card-title-custom">Indoor Studio Suite</h3>
+                <p class="card-text-custom">2,500 sq. ft. daylight studio equipped with Broncolor flash systems, softbox setups, and private lounge amenities.</p>
+                <ul class="card-meta-list">
+                  <li><i class="bi bi-check2-circle"></i> Complete Privacy &amp; Climate Control</li>
+                  <li><i class="bi bi-check2-circle"></i> Wardrobe &amp; Makeup Lounge Included</li>
+                </ul>
+                <div class="card-footer-custom">
+                  <a href="services.html" class="btn btn-primary-gold">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/home1/service-outdoor.jpg" alt="Outdoor Location Sessions">
+              </div>
+              <div class="card-body-custom">
+                <div class="card-icon-box"><i class="bi bi-sun-fill"></i></div>
+                <h3 class="card-title-custom">Outdoor Location Sessions</h3>
+                <p class="card-text-custom">Golden hour portrait sessions in coastal cliffs, botanical gardens, and urban architectural backdrops.</p>
+                <ul class="card-meta-list">
+                  <li><i class="bi bi-check2-circle"></i> Curated Scenic Locations</li>
+                  <li><i class="bi bi-check2-circle"></i> Natural Lighting Expertise</li>
+                </ul>
+                <div class="card-footer-custom">
+                  <a href="services.html" class="btn btn-primary-gold">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/home1/service-branding.jpg" alt="Personal Branding">
+              </div>
+              <div class="card-body-custom">
+                <div class="card-icon-box"><i class="bi bi-person-badge-fill"></i></div>
+                <h3 class="card-title-custom">Personal Branding</h3>
+                <p class="card-text-custom">A comprehensive media suite of portraits, lifestyle action shots, and editorial imagery for founders and creators.</p>
+                <ul class="card-meta-list">
+                  <li><i class="bi bi-check2-circle"></i> Commercial License Included</li>
+                  <li><i class="bi bi-check2-circle"></i> Multi-Outfit Styling Plan</li>
+                </ul>
+                <div class="card-footer-custom">
+                  <a href="services.html" class="btn btn-primary-gold">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Portfolio Preview Grid -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Visual Excellence</span>
+          <h2 class="section-title">Family &amp; Newborn Portfolio Preview</h2>
+          <p class="section-description">A glance at recent portrait sessions produced at LumiFrame Studio.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
+          <div class="col animate-fade-up">
+            <div class="portfolio-card">
+              <img src="assets/images/home1/portfolio-1.jpg" alt="The Vance Family">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Outdoor Family</span>
+                <h4 class="portfolio-item-title">The Vance Family</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="portfolio-card">
+              <img src="assets/images/home1/portfolio-2.jpg" alt="Baby Oliver">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Newborn Fine Art</span>
+                <h4 class="portfolio-item-title">Baby Oliver (12 Days)</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="portfolio-card">
+              <img src="assets/images/home1/portfolio-3.jpg" alt="Sophia & Alexander">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Maternity Silhouette</span>
+                <h4 class="portfolio-item-title">Sophia &amp; Alexander</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="portfolio-card">
+              <img src="assets/images/home1/portfolio-4.jpg" alt="Julian Sterling">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Executive Portrait</span>
+                <h4 class="portfolio-item-title">Julian Sterling</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5 animate-fade-up">
+          <a href="portfolio.html" class="btn btn-outline-gold"><i class="bi bi-grid-3x3-gap-fill"></i> View Complete Gallery</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Why Choose LumiFrame Studio -->
+    <section class="section-padding bg-surface-secondary">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Unmatched Quality</span>
+          <h2 class="section-title">Why Choose LumiFrame Studio</h2>
+          <p class="section-description">We go beyond pressing the shutter. We create an unforgettable, relaxing, and artistic portrait journey.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
+          <div class="col animate-fade-up">
+            <div class="card-custom text-center p-4">
+              <div class="card-icon-box mx-auto mb-3"><i class="bi bi-award-fill"></i></div>
+              <h3 class="card-title-custom">15+ Years Mastery</h3>
+              <p class="card-text-custom">Award-winning portrait artists trained in classical painting light and modern digital art.</p>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom text-center p-4">
+              <div class="card-icon-box mx-auto mb-3"><i class="bi bi-camera-fill"></i></div>
+              <h3 class="card-title-custom">Hasselblad Optics</h3>
+              <p class="card-text-custom">Medium format sensor equipment offering 100-megapixel clarity for large wall art displays.</p>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom text-center p-4">
+              <div class="card-icon-box mx-auto mb-3"><i class="bi bi-house-heart-fill"></i></div>
+              <h3 class="card-title-custom">Private Luxury Suites</h3>
+              <p class="card-text-custom">Climate-controlled studio rooms with private changing areas, infant warmers, and espresso lounge.</p>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom text-center p-4">
+              <div class="card-icon-box mx-auto mb-3"><i class="bi bi-gem"></i></div>
+              <h3 class="card-title-custom">Archival Wall Art</h3>
+              <p class="card-text-custom">Handcrafted Italian leather albums and museum-grade Hahnemühle cotton canvas prints.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Photography Process -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Seamless Workflow</span>
+          <h2 class="section-title">The Photography Process</h2>
+          <p class="section-description">Our simple 4-step experience designed to make your session effortless and memorable.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4 process-grid">
+          <div class="col animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/home1/process-consultation.jpg" alt="Creative Consultation">
+              </div>
+              <div class="card-body-custom">
+                <span class="badge-tag card-tag">Step 01</span>
+                <h3 class="card-title-custom">Creative Consultation</h3>
+                <p class="card-text-custom">Plan your vision, styling palette, studio props, and location details together.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/home1/process-styling.jpg" alt="Wardrobe & Styling">
+              </div>
+              <div class="card-body-custom">
+                <span class="badge-tag card-tag">Step 02</span>
+                <h3 class="card-title-custom">Wardrobe &amp; Styling</h3>
+                <p class="card-text-custom">Choose wardrobe pieces, gowns, hair, and makeup support for a polished look.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/home1/process-session.jpg" alt="Guided Photo Shoot">
+              </div>
+              <div class="card-body-custom">
+                <span class="badge-tag card-tag">Step 03</span>
+                <h3 class="card-title-custom">Guided Photo Shoot</h3>
+                <p class="card-text-custom">Enjoy calm direction for natural smiles, confident poses, and easy energy.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom">
+              <div class="card-img-wrapper">
+                <img src="assets/images/home1/process-reveal.jpg" alt="Cinematic Reveal">
+              </div>
+              <div class="card-body-custom">
+                <span class="badge-tag card-tag">Step 04</span>
+                <h3 class="card-title-custom">Cinematic Gallery Reveal</h3>
+                <p class="card-text-custom"><span class="process-copy-default">Review retouched portraits in studio and select bespoke canvas artwork.</span><span class="process-copy-wide">Review retouched portraits in studio and select bespoke canvas artwork for your home.</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Studio Environment & Fine-Art Wall Art Preview -->
+    <section class="section-padding bg-surface-secondary">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 animate-fade-up">
+            <span class="section-subtitle">Museum Grade Quality</span>
+            <h2 class="section-title">Heirloom Wall Art &amp; Canvas Displays</h2>
+            <p class="lead-text">Your portraits belong on your walls, not forgotten on hard drives.</p>
+            <p class="card-text-custom">We craft physical legacy pieces using archival pigments guaranteed for 100+ years. Choose from flush-mount Italian leather albums, hand-cut acrylic wall panels, and solid hardwood framed canvases customized for your home interior.</p>
+            <ul class="card-meta-list mb-4">
+              <li><i class="bi bi-star-fill text-gold"></i> 100-Year Color Guarantee</li>
+              <li><i class="bi bi-star-fill text-gold"></i> Handcrafted Frame Mouldings</li>
+              <li><i class="bi bi-star-fill text-gold"></i> Complimentary Wall Mockup Design</li>
+            </ul>
+            <a href="packages.html" class="btn btn-primary-gold"><i class="bi bi-box-seam-fill"></i> Explore Packages &amp; Wall Art</a>
+          </div>
+          <div class="col-lg-6 animate-fade-up">
+            <div class="card-custom overflow-hidden shadow-lg">
+              <img src="assets/images/home1/wall-art-preview.jpg" alt="Heirloom Wall Art Display" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: Client Testimonials & Reviews -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Words of Trust</span>
+          <h2 class="section-title">Client Testimonials &amp; Reviews</h2>
+          <p class="section-description">Read what families, parents, and executives say about their LumiFrame portrait session.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row g-4 row-cols-1 row-cols-md-3 testimonial-grid">
+          <div class="col animate-fade-up">
+            <div class="card-custom p-4">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <img src="assets/images/home1/testimonial-1.jpg" alt="Claire Vance" class="testimonial-avatar">
+                <div>
+                  <h4 class="h5 mb-0" style="color:var(--heading-color);">Claire Vance</h4>
+                  <small class="text-gold"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></small>
+                </div>
+              </div>
+              <blockquote class="quote-artistic testimonial-quote my-2 py-2 px-3 border-0 bg-transparent">
+                "The newborn session felt magical. Marcus was gentle with Oliver, and the canvas portraits in our living room still move us every day."
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom p-4">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <img src="assets/images/home1/testimonial-2.jpg" alt="Michael Ross" class="testimonial-avatar">
+                <div>
+                  <h4 class="h5 mb-0" style="color:var(--heading-color);">Michael Ross</h4>
+                  <small class="text-gold"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></small>
+                </div>
+              </div>
+              <blockquote class="quote-artistic testimonial-quote my-2 py-2 px-3 border-0 bg-transparent">
+                "Outstanding executive headshots. I needed portraits with leadership warmth, and the studio delivered the presence I wanted."
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom p-4">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <img src="assets/images/home1/testimonial-3.jpg" alt="Sarah &amp; David" class="testimonial-avatar">
+                <div>
+                  <h4 class="h5 mb-0" style="color:var(--heading-color);">Sarah &amp; David</h4>
+                  <small class="text-gold"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></small>
+                </div>
+              </div>
+              <blockquote class="quote-artistic testimonial-quote my-2 py-2 px-3 border-0 bg-transparent">
+                "Our maternity shoot felt like a luxury experience. The gown collection was stunning, and Elena made me feel beautiful and confident."
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION (Date-Availability CTA) -->
+    <section class="section-padding text-center position-relative overflow-hidden" style="background: url('assets/images/home1/cta-bg.jpg') center/cover no-repeat;">
+      <div class="banner-overlay" style="opacity:0.85;"></div>
+      <div class="container position-relative z-2">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 animate-fade-up">
+            <span class="section-subtitle text-gold">Reserve Your Date</span>
+            <h2 class="text-white font-heading display-5 fw-bold mb-3">Ready to Create Timeless Fine Art Portraits?</h2>
+            <p class="text-light mb-4 lead-text">Our studio limits bookings each month to ensure uncompromised quality and personalized artistic focus for every client family.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="contact.html" class="btn btn-primary-gold"><i class="bi bi-calendar-event"></i> Check Date Availability</a>
+              <a href="packages.html" class="btn btn-outline-gold text-white"><i class="bi bi-tag-fill"></i> View Session Packages</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="assets/images/common/lumi_logo.png" alt="LumiFrame Studio" class="footer-brand-img mb-0">
+            <span class="font-heading fw-bold text-white fs-4">LumiFrame Studio</span>
+          </div>
+          <p class="footer-desc">LumiFrame Studio is a premier portrait photography studio dedicated to creating heirloom fine art imagery for families, newborns, maternity, and business leaders.</p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="social-icon-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-icon-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html">About Studio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 ">
+          <h3 class="footer-heading">Photography Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html">Family Legacy Portraits</a></li>
+            <li><a href="services.html">Newborn &amp; Infant Art</a></li>
+            <li><a href="services.html">Maternity Fine Art</a></li>
+            <li><a href="services.html">Children &amp; Milestones</a></li>
+            <li><a href="services.html">Couples &amp; Engagements</a></li>
+            <li><a href="services.html">Executive Headshots</a></li>
+            <li><a href="services.html">Personal Branding</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 ">
+          <h3 class="footer-heading">Studio Info &amp; Hours</h3>
+          <ul class="footer-contact-info mb-3">
+            <li><i class="bi bi-geo-alt-fill"></i> 450 Portrait Way, Suite 800, San Francisco, CA</li>
+            <li><i class="bi bi-telephone-fill"></i> +1 (415) 890-3421</li>
+            <li><i class="bi bi-envelope-fill"></i> concierge@lumiframestudio.com</li>
+            <li><i class="bi bi-clock-fill"></i> Tue - Sun: 9:00 AM - 6:00 PM (Mon Closed)</li>
+          </ul>
+          <form class="footer-newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 LumiFrame Studio. All Rights Reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Studio Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button type="button" class="lightbox-btn lightbox-close-btn" aria-label="Close Lightbox"><i class="bi bi-x-lg"></i></button>
+    <button type="button" class="lightbox-btn lightbox-prev-btn" aria-label="Previous Image"><i class="bi bi-chevron-left"></i></button>
+    <button type="button" class="lightbox-btn lightbox-next-btn" aria-label="Next Image"><i class="bi bi-chevron-right"></i></button>
+    <div class="lightbox-content-wrapper">
+      <img src="" alt="Lightbox View" class="lightbox-img">
+      <div class="lightbox-caption">
+        <h4 class="lightbox-title h4 mb-0"></h4>
+        <div class="lightbox-subtitle"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/portfolio.js"></script>
+  <script src="assets/js/booking.js"></script>
+</body>
+</html>

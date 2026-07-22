@@ -1,0 +1,260 @@
+/* ==========================================================================
+   LumiFrame Studio - Authentication Pages Stylesheet
+   Glassmorphic Auth Card, Top-Right Toggles, Social Login Buttons
+   Responsive for all screen sizes including 360px mobile
+   ========================================================================== */
+
+.auth-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* Safe padding for all screen sizes including notched phones */
+  padding: max(40px, env(safe-area-inset-top)) 20px max(30px, env(safe-area-inset-bottom));
+  overflow-x: hidden;
+}
+
+.auth-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(14, 14, 14, 0.75) 0%, rgba(14, 14, 14, 0.88) 100%);
+  z-index: 1;
+}
+
+/* Top-Right Toggles Floating Control Header */
+.auth-top-controls {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.auth-top-controls .icon-toggle-btn {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+.auth-top-controls .icon-toggle-btn:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Main Container Card */
+.auth-card-container {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 480px;
+}
+
+.auth-branding {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.auth-branding img {
+  height: 52px;
+  width: auto;
+  max-width: 200px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+}
+
+.auth-card {
+  background: rgba(22, 22, 22, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
+  /* Prevent overflow */
+  overflow: hidden;
+  width: 100%;
+}
+
+.auth-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 4vw, 1.85rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.auth-subtitle {
+  font-size: 0.9rem;
+  color: #BBBBBB;
+  text-align: center;
+  margin-bottom: 28px;
+  overflow-wrap: break-word;
+}
+
+.auth-card .form-label-custom {
+  color: #E0E0E0;
+}
+
+.auth-card .form-control-custom {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+}
+
+.auth-card .form-control-custom:focus {
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.auth-card .form-control-custom::placeholder {
+  color: #888888;
+}
+
+/* Divider for Social Login */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 28px 0;
+  color: #888888;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.auth-divider span {
+  padding: 0 14px;
+  white-space: nowrap;
+}
+
+/* Third-Party Login Options BELOW Form */
+.social-login-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-social-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 20px;
+  min-height: 44px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.btn-social-login:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-social-login i {
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.auth-footer-links {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.88rem;
+  color: #AAAAAA;
+  overflow-wrap: break-word;
+}
+
+.auth-footer-links a {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* ─── Responsive Auth ─── */
+
+@media (max-width: 767.98px) {
+  .auth-wrapper {
+    padding-top: max(64px, env(safe-area-inset-top));
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .auth-card-container {
+    max-width: 100%;
+  }
+
+  .auth-card {
+    padding: 28px 20px;
+    border-radius: 14px;
+  }
+
+  .auth-title {
+    font-size: 1.5rem;
+  }
+
+  .auth-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .auth-top-controls {
+    top: 14px;
+    right: 14px;
+    gap: 8px;
+  }
+
+  .auth-top-controls .icon-toggle-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .btn-social-login {
+    font-size: 0.82rem;
+    padding: 10px 16px;
+  }
+
+  .auth-divider {
+    margin: 20px 0;
+  }
+}
+
+/* Landscape phone fix */
+@media (max-width: 767.98px) and (orientation: landscape) {
+  .auth-wrapper {
+    justify-content: flex-start;
+    padding-top: 50px;
+  }
+
+  .auth-card {
+    padding: 20px 20px;
+  }
+}

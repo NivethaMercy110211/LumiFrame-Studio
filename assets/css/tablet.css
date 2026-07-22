@@ -1,0 +1,266 @@
+/* ==========================================================================
+   LumiFrame Studio — Tablet Viewport Stylesheet
+   Breakpoints covered:
+     768px × 1024   → iPad Mini / standard tablet
+     1024px × 1366  → iPad Pro / desktop-like tablet
+   ========================================================================== */
+
+/* ─── Shared: hide desktop nav, show hamburger (768px–1199px) ─── */
+@media (max-width: 1199.98px) {
+  /* Tighten nav gap to prevent wrapping before breakpoint */
+  .main-nav {
+    gap: 16px;
+  }
+
+  .nav-link {
+    font-size: 0.83rem;
+    letter-spacing: 0.6px;
+  }
+}
+
+/* ─── Hide desktop nav at <992px, show hamburger ─── */
+@media (max-width: 991.98px) {
+  .main-nav {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+  }
+
+  /* ─── Header height tablet ─── */
+  .site-header {
+    height: 72px;
+  }
+
+  .header-brand img.brand-logo {
+    height: 40px;
+  }
+
+  /* ─── Hero banners ─── */
+  .site-banner.hero-banner {
+    height: 500px;
+    min-height: 440px;
+  }
+
+  .site-banner.inner-banner {
+    height: 290px;
+    min-height: 250px;
+  }
+
+  /* ─── Banner typography ─── */
+  .banner-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+  }
+
+  .banner-lead {
+    font-size: 1rem;
+  }
+
+  /* ─── Section spacing ─── */
+  .section-padding {
+    padding: 70px 0;
+  }
+
+  .section-padding-sm {
+    padding: 50px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  /* ─── Section typography ─── */
+  .section-title {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+  }
+
+  h1, .h1 { font-size: clamp(2rem, 5vw, 3rem); }
+  h2, .h2 { font-size: clamp(1.75rem, 4.5vw, 2.5rem); }
+  h3, .h3 { font-size: clamp(1.3rem, 3.5vw, 1.85rem); }
+
+  /* ─── Cards ─── */
+  .card-body-custom {
+    padding: 22px 20px;
+  }
+
+  .card-title-custom {
+    font-size: 1.2rem;
+  }
+
+  /* ─── Buttons ─── */
+  .btn {
+    min-height: 44px;
+    padding: 12px 24px;
+    font-size: 0.84rem;
+  }
+
+  .btn-filter-pill {
+    min-height: 40px;
+    padding: 9px 16px;
+    font-size: 0.8rem;
+  }
+
+  /* ─── Footer ─── */
+  .site-footer {
+    padding-top: 60px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* ─── iPad Mini (768px–991px): grid centering odd last cards ─── */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* Fluid banner title */
+  .banner-title {
+    font-size: clamp(2rem, 4.5vw, 2.75rem);
+  }
+
+  /* Center orphan card in a 2-col grid */
+  .row-cols-md-2 > .col:last-child:nth-child(odd) {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Center orphan in a 3-col grid */
+  .row-cols-md-3 > .col:last-child:nth-child(3n+1),
+  .row-cols-md-3 > .col:last-child:nth-child(3n+2) {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Prevent 4-col becoming 2 awkward column row */
+  .row-cols-md-2.row-cols-lg-4 > .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Portfolio filter pills: allow wrapping on tablet */
+  .portfolio-filter-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Auth card: give breathing room */
+  .auth-card-container {
+    max-width: 440px;
+  }
+
+  /* Forms inline on tablet */
+  .footer-newsletter-form {
+    flex-direction: row;
+  }
+
+  /* Packages comparison table */
+  .table th,
+  .table td {
+    font-size: 0.88rem;
+    padding: 12px 10px;
+  }
+}
+
+/* ─── iPad Pro / Large Tablet (1024px–1199px) ─── */
+@media (min-width: 1024px) and (max-width: 1199.98px) {
+  .container {
+    padding-left: 28px;
+    padding-right: 28px;
+    max-width: 980px;
+  }
+
+  /* iPad Pro: keep all menu pages inside the menu drawer like iPad Mini */
+  .main-nav {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    display: flex !important;
+  }
+
+  .header-controls .theme-toggle-btn,
+  .header-controls .rtl-toggle-btn,
+  .btn-header-login {
+    display: none !important;
+  }
+
+  .site-header {
+    height: 76px;
+  }
+
+  .header-brand img.brand-logo {
+    height: 44px;
+  }
+
+  /* Hero banner */
+  .site-banner.hero-banner {
+    height: 540px;
+  }
+
+  .site-banner.inner-banner {
+    height: 310px;
+  }
+
+  .banner-title {
+    font-size: clamp(2.5rem, 4vw, 3.25rem);
+  }
+
+  /* Section spacing */
+  .section-padding {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 3.5vw, 2.5rem);
+  }
+
+  /* 4-col grid on large tablet */
+  .row-cols-lg-4 > .col {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  /* 3-col grid on large tablet */
+  .row-cols-lg-3 > .col {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+
+  /* Auth card */
+  .auth-card-container {
+    max-width: 480px;
+  }
+}
+
+/* ─── Landscape tablet/iPad fix ─── */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .site-banner.hero-banner {
+    height: 420px;
+    min-height: 380px;
+  }
+
+  .site-banner.inner-banner {
+    height: 240px;
+    min-height: 200px;
+  }
+
+  .auth-wrapper {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}

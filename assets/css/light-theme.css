@@ -1,0 +1,18 @@
+/* ==========================================================================
+   LumiFrame Studio - Light Theme Explicit Styles
+   ========================================================================== */
+
+[data-theme="light"], html[data-bs-theme="light"] {
+  --bg-main: #FAFAFA;
+  --bg-surface: #FFFFFF;
+  --bg-surface-secondary: #F4F4F4;
+  --bg-card: #FFFFFF;
+  --bg-header: rgba(255, 255, 255, 0.96);
+  --bg-footer: #121212;
+
+  --text-main: #222222;
+  --text-muted: #555555;
+  --heading-color: #111111;
+  --border-color: #E2E2E2;
+}
+

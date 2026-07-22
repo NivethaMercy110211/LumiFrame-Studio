@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-bs-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Gallery - LumiFrame Fine Art Portraiture</title>
+  <meta name="description" content="Browse LumiFrame Studio's filterable portrait portfolio: Family, newborn, maternity, corporate, outdoor, and fine-art studio collections.">
+  <link rel="icon" type="image/png" href="assets/images/common/lumi_icon.png">
+
+  <!-- Bootstrap 5 & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Modular Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/banner.css">
+  <link rel="stylesheet" href="assets/css/cards.css">
+  <link rel="stylesheet" href="assets/css/buttons.css">
+  <link rel="stylesheet" href="assets/css/forms.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+  <link rel="stylesheet" href="assets/css/light-theme.css">
+  <link rel="stylesheet" href="assets/css/dark-theme.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/desktop.css">
+  <link rel="stylesheet" href="assets/css/laptop.css">
+  <link rel="stylesheet" href="assets/css/tablet.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <link rel="stylesheet" href="assets/css/responsive-patch.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="header-brand">
+        <img src="assets/images/common/lumi_logo.png" alt="LumiFrame Studio Logo" class="brand-logo">
+        <span class="brand-name">LumiFrame Studio</span>
+      </a>
+
+      <nav class="d-none d-xl-block">
+        <ul class="main-nav">
+          <li><a href="index.html" class="nav-link">Home 1</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+          <li><a href="packages.html" class="nav-link">Packages</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button type="button" class="icon-toggle-btn theme-toggle-btn d-none d-xl-inline-flex" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <button type="button" class="icon-toggle-btn rtl-toggle-btn d-none d-xl-inline-flex" title="Toggle RTL/LTR"><span class="rtl-label" style="font-size:0.75rem; font-weight:700;">RTL</span></button>
+        <a href="login.html" class="btn btn-header-login d-none d-xl-inline-flex"><i class="bi bi-person-fill"></i> Login</a>
+        <button type="button" class="hamburger-btn" aria-label="Open Navigation Menu"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div class="nav-backdrop"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+        <img src="assets/images/common/lumi_logo.png" alt="LumiFrame Studio" style="height:36px;">
+        <span class="font-heading fw-bold" style="font-size:1.15rem; color:var(--heading-color);">LumiFrame Studio</span>
+      </a>
+      <button type="button" class="close-drawer-btn"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="nav-link">Home 1</a></li>
+      <li><a href="home2.html" class="nav-link">Home 2</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+      <li><a href="packages.html" class="nav-link">Packages</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <div class="mobile-drawer-toggles">
+        <button type="button" class="icon-toggle-btn theme-toggle-btn"><i class="bi bi-moon-stars-fill"></i></button>
+        <button type="button" class="icon-toggle-btn rtl-toggle-btn"><span class="rtl-label" style="font-size:0.75rem; font-weight:700;">RTL</span></button>
+      </div>
+      <a href="login.html" class="btn btn-primary-gold w-100 mt-2"><i class="bi bi-person-fill"></i> Login</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Compact Banner -->
+    <section class="site-banner inner-banner" style="background-image: url('assets/images/portfolio/banner.jpg');">
+      <div class="banner-overlay"></div>
+      <div class="container banner-content">
+        <span class="banner-subtitle animate-fade-up">Curated Fine Art Works</span>
+        <h1 class="banner-title animate-fade-up">Portfolio Gallery</h1>
+        <ul class="banner-breadcrumb animate-fade-up">
+          <li><a href="index.html">Home</a></li>
+          <li class="separator">/</li>
+          <li class="active">Portfolio</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 1 & 2: Functional Portfolio Filters & Interactive Grid -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Visual Excellence</span>
+          <h2 class="section-title">Explore Our Work By Category</h2>
+          <p class="section-description">Click any category tab to filter. Click any image to launch the full-screen cinematic Lightbox modal.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <!-- Filter Tab Pills -->
+        <div class="portfolio-filter-bar animate-fade-up">
+          <button type="button" class="btn btn-filter-pill portfolio-filter-btn active" data-filter="all">All Works</button>
+          <button type="button" class="btn btn-filter-pill portfolio-filter-btn" data-filter="family">Family</button>
+          <button type="button" class="btn btn-filter-pill portfolio-filter-btn" data-filter="newborn">Newborn</button>
+          <button type="button" class="btn btn-filter-pill portfolio-filter-btn" data-filter="maternity">Maternity</button>
+          <button type="button" class="btn btn-filter-pill portfolio-filter-btn" data-filter="corporate">Corporate</button>
+          <button type="button" class="btn btn-filter-pill portfolio-filter-btn" data-filter="outdoor">Outdoor</button>
+          <button type="button" class="btn btn-filter-pill portfolio-filter-btn" data-filter="studio">Studio</button>
+          <button type="button" class="btn btn-filter-pill portfolio-filter-btn" data-filter="branding">Personal Branding</button>
+        </div>
+
+        <!-- Portfolio Items Grid -->
+        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4" id="portfolioGrid">
+          
+          <div class="col portfolio-item" data-category="family">
+            <div class="portfolio-card">
+              <img src="assets/images/portfolio/port-family-1.jpg" alt="The Sterling Family">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Family</span>
+                <h4 class="portfolio-item-title">The Sterling Family</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col portfolio-item" data-category="family">
+            <div class="portfolio-card">
+              <img src="assets/images/portfolio/port-family-2.jpg" alt="The Davies Trio">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Family</span>
+                <h4 class="portfolio-item-title">The Davies Trio</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col portfolio-item" data-category="newborn">
+            <div class="portfolio-card">
+              <img src="assets/images/portfolio/port-newborn-1.jpg" alt="Baby Clara">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Newborn</span>
+                <h4 class="portfolio-item-title">Baby Clara (8 Days)</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col portfolio-item" data-category="newborn">
+            <div class="portfolio-card">
+              <img src="assets/images/portfolio/port-newborn-2.jpg" alt="Twin Joy: Leo & Maya">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Newborn</span>
+                <h4 class="portfolio-item-title">Twin Joy: Leo &amp; Maya</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col portfolio-item" data-category="maternity">
+            <div class="portfolio-card">
+              <img src="assets/images/portfolio/port-maternity-1.jpg" alt="Victoria In Silk">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Maternity</span>
+                <h4 class="portfolio-item-title">Victoria In Silk</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col portfolio-item" data-category="maternity">
+            <div class="portfolio-card">
+              <img src="assets/images/portfolio/port-maternity-2.jpg" alt="Seraphina">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Maternity</span>
+                <h4 class="portfolio-item-title">Seraphina</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col portfolio-item" data-category="outdoor">
+            <div class="portfolio-card">
+              <img src="assets/images/portfolio/port-outdoor-1.jpg" alt="Whispering Pines">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Outdoor</span>
+                <h4 class="portfolio-item-title">Whispering Pines</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col portfolio-item" data-category="outdoor">
+            <div class="portfolio-card">
+              <img src="assets/images/portfolio/port-outdoor-2.jpg" alt="Coastal Horizon">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Outdoor</span>
+                <h4 class="portfolio-item-title">Coastal Horizon</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col portfolio-item" data-category="corporate">
+            <div class="portfolio-card">
+              <img src="assets/images/portfolio/port-corporate-1.jpg" alt="Arthur Vance, Esq.">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Corporate</span>
+                <h4 class="portfolio-item-title">Arthur Vance, Esq.</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col portfolio-item" data-category="corporate">
+            <div class="portfolio-card">
+              <img src="assets/images/portfolio/port-corporate-2.jpg" alt="Dr. Helen Chen">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Corporate</span>
+                <h4 class="portfolio-item-title">Dr. Helen Chen</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col portfolio-item" data-category="branding">
+            <div class="portfolio-card">
+              <img src="assets/images/portfolio/port-branding-1.jpg" alt="Maya Lin, Architect">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Personal Branding</span>
+                <h4 class="portfolio-item-title">Maya Lin, Architect</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col portfolio-item" data-category="branding">
+            <div class="portfolio-card">
+              <img src="assets/images/portfolio/port-branding-2.jpg" alt="David Ross, Author">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Personal Branding</span>
+                <h4 class="portfolio-item-title">David Ross, Author</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col portfolio-item" data-category="studio">
+            <div class="portfolio-card">
+              <img src="assets/images/portfolio/port-studio-1.jpg" alt="Rembrandt Light">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Studio</span>
+                <h4 class="portfolio-item-title">Rembrandt Light Study</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col portfolio-item" data-category="studio">
+            <div class="portfolio-card">
+              <img src="assets/images/portfolio/port-studio-2.jpg" alt="The Velvet Stance">
+              <div class="portfolio-overlay">
+                <span class="portfolio-cat-tag">Studio</span>
+                <h4 class="portfolio-item-title">The Velvet Stance</h4>
+                <div class="portfolio-view-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Behind The Lens & Lighting Setups -->
+    <section class="section-padding bg-surface-secondary">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 animate-fade-up">
+            <span class="section-subtitle">Technical Artistry</span>
+            <h2 class="section-title">Behind The Lens: Lighting Architecture</h2>
+            <p class="lead-text">Precision studio modifier placement builds depth and mood.</p>
+            <p class="card-text-custom">We utilize Broncolor Para 222 FB parabolic reflectors combined with key fill softboxes and rim hair-lights to sculpt classic dimensional portrait lighting.</p>
+          </div>
+          <div class="col-lg-6 animate-fade-up">
+            <div class="card-custom">
+              <img src="assets/images/portfolio/behind-lens.jpg" alt="Lighting Setup Diagram" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Museum-Grade Fine Art Prints & Framing Showcase -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 order-lg-2 animate-fade-up">
+            <span class="section-subtitle">Archival Quality</span>
+            <h2 class="section-title">Museum Fine Art Prints &amp; Framing</h2>
+            <p class="lead-text">Handcrafted cotton rag papers and Italian wood mouldings.</p>
+            <p class="card-text-custom">Every print is individually inspected, color-profiled, and mounted on acid-free boards for heirloom preservation.</p>
+          </div>
+          <div class="col-lg-6 order-lg-1 animate-fade-up">
+            <div class="card-custom">
+              <img src="assets/images/portfolio/fineart-prints.jpg" alt="Fine Art Print Showcase" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Wardrobe & Styling Preparation Guide -->
+    <section class="section-padding bg-surface-secondary">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 animate-fade-up">
+            <span class="section-subtitle">Client Preparation</span>
+            <h2 class="section-title">Wardrobe &amp; Styling Guide</h2>
+            <p class="lead-text">Harmonious color palettes create cohesive family imagery.</p>
+            <p class="card-text-custom">Our complimentary styling consultation helps your family select soft neutral textures (creams, taupes, sage, and navy) that compliment skin tones without visual clutter.</p>
+          </div>
+          <div class="col-lg-6 animate-fade-up">
+            <div class="card-custom">
+              <img src="assets/images/portfolio/styling-guide.jpg" alt="Styling Guide Sample" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Video & Motion Portraiture Showcase -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 order-lg-2 animate-fade-up">
+            <span class="section-subtitle">Modern Hybrids</span>
+            <h2 class="section-title">4K Motion Video Portraiture</h2>
+            <p class="lead-text">Living portraits captured in 4K cinema slow-motion.</p>
+            <p class="card-text-custom">Add short 60-second video portraits to your session gallery—capturing hair motion, laughter, and subtle micro-expressions.</p>
+          </div>
+          <div class="col-lg-6 order-lg-1 animate-fade-up">
+            <div class="card-custom">
+              <img src="assets/images/portfolio/motion-portraits.jpg" alt="4K Motion Video Portrait" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 (CTA SECTION): Portfolio Booking CTA -->
+    <section class="section-padding text-center position-relative overflow-hidden" style="background: url('assets/images/portfolio/cta-bg.jpg') center/cover no-repeat;">
+      <div class="banner-overlay" style="opacity:0.85;"></div>
+      <div class="container position-relative z-2">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 animate-fade-up">
+            <span class="section-subtitle text-gold">Start Your Project</span>
+            <h2 class="text-white font-heading display-5 fw-bold mb-3">Create Your Personal Portrait Gallery</h2>
+            <p class="text-light mb-4 lead-text">Let us design a bespoke portrait experience tailored to your home and lifestyle.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="contact.html" class="btn btn-primary-gold"><i class="bi bi-calendar2-check-fill"></i> Plan Your Portrait Session</a>
+              <a href="packages.html" class="btn btn-outline-gold text-white"><i class="bi bi-cash-stack"></i> Explore Investment Packages</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="assets/images/common/lumi_logo.png" alt="LumiFrame Studio" class="footer-brand-img mb-0">
+            <span class="font-heading fw-bold text-white fs-4">LumiFrame Studio</span>
+          </div>
+          <p class="footer-desc">LumiFrame Studio is a premier portrait photography studio dedicated to creating heirloom fine art imagery for families, newborns, maternity, and business leaders.</p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="social-icon-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-icon-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html">About Studio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h3 class="footer-heading">Photography Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html">Family Legacy Portraits</a></li>
+            <li><a href="services.html">Newborn &amp; Infant Art</a></li>
+            <li><a href="services.html">Maternity Fine Art</a></li>
+            <li><a href="services.html">Children &amp; Milestones</a></li>
+            <li><a href="services.html">Couples &amp; Engagements</a></li>
+            <li><a href="services.html">Executive Headshots</a></li>
+            <li><a href="services.html">Personal Branding</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h3 class="footer-heading">Studio Info &amp; Hours</h3>
+          <ul class="footer-contact-info mb-3">
+            <li><i class="bi bi-geo-alt-fill"></i> 450 Portrait Way, Suite 800, San Francisco, CA</li>
+            <li><i class="bi bi-telephone-fill"></i> +1 (415) 890-3421</li>
+            <li><i class="bi bi-envelope-fill"></i> concierge@lumiframestudio.com</li>
+            <li><i class="bi bi-clock-fill"></i> Tue - Sun: 9:00 AM - 6:00 PM (Mon Closed)</li>
+          </ul>
+          <form class="footer-newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 LumiFrame Studio. All Rights Reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Studio Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal Container -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button type="button" class="lightbox-btn lightbox-close-btn" aria-label="Close Lightbox"><i class="bi bi-x-lg"></i></button>
+    <button type="button" class="lightbox-btn lightbox-prev-btn" aria-label="Previous Image"><i class="bi bi-chevron-left"></i></button>
+    <button type="button" class="lightbox-btn lightbox-next-btn" aria-label="Next Image"><i class="bi bi-chevron-right"></i></button>
+    <div class="lightbox-content-wrapper">
+      <img src="" alt="Lightbox View" class="lightbox-img">
+      <div class="lightbox-caption">
+        <h4 class="lightbox-title h4 mb-0"></h4>
+        <div class="lightbox-subtitle"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/portfolio.js"></script>
+  <script src="assets/js/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* ==========================================================================
+   LumiFrame Studio - Dark Theme Explicit Styles
+   High Contrast Obsidian & Fine-Art Gold Palette
+   ========================================================================== */
+
+[data-theme="dark"], html[data-bs-theme="dark"] {
+  --bg-main: #0B0B0C;
+  --bg-surface: #141416;
+  --bg-surface-secondary: #1C1C1F;
+  --bg-card: #161618;
+  --bg-header: rgba(11, 11, 12, 0.95);
+  --bg-footer: #060607;
+
+  --text-main: #E5E5E8;
+  --text-muted: #A0A0A5;
+  --heading-color: #FFFFFF;
+  --border-color: #28282C;
+}
+
+[data-theme="dark"] .card-custom,
+html[data-bs-theme="dark"] .card-custom {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .form-control-custom,
+[data-theme="dark"] .form-select-custom,
+html[data-bs-theme="dark"] .form-control-custom,
+html[data-bs-theme="dark"] .form-select-custom {
+  background-color: #121214;
+  color: #FFFFFF;
+  border-color: #2A2A30;
+}
+
+[data-theme="dark"] .form-control-custom::placeholder,
+html[data-bs-theme="dark"] .form-control-custom::placeholder {
+  color: #777780;
+}

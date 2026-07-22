@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-bs-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us &amp; Booking - LumiFrame Studio</title>
+  <meta name="description" content="Check date availability and book your portrait session with LumiFrame Studio in San Francisco. Contact details, map, and FAQs.">
+  <link rel="icon" type="image/png" href="assets/images/common/lumi_icon.png">
+
+  <!-- Bootstrap 5 & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Modular Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/banner.css">
+  <link rel="stylesheet" href="assets/css/cards.css">
+  <link rel="stylesheet" href="assets/css/buttons.css">
+  <link rel="stylesheet" href="assets/css/forms.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+  <link rel="stylesheet" href="assets/css/light-theme.css">
+  <link rel="stylesheet" href="assets/css/dark-theme.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/desktop.css">
+  <link rel="stylesheet" href="assets/css/laptop.css">
+  <link rel="stylesheet" href="assets/css/tablet.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <link rel="stylesheet" href="assets/css/responsive-patch.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="header-brand">
+        <img src="assets/images/common/lumi_logo.png" alt="LumiFrame Studio Logo" class="brand-logo">
+        <span class="brand-name">LumiFrame Studio</span>
+      </a>
+
+      <nav class="d-none d-xl-block">
+        <ul class="main-nav">
+          <li><a href="index.html" class="nav-link">Home 1</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="packages.html" class="nav-link">Packages</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button type="button" class="icon-toggle-btn theme-toggle-btn d-none d-xl-inline-flex" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <button type="button" class="icon-toggle-btn rtl-toggle-btn d-none d-xl-inline-flex" title="Toggle RTL/LTR"><span class="rtl-label" style="font-size:0.75rem; font-weight:700;">RTL</span></button>
+        <a href="login.html" class="btn btn-header-login d-none d-xl-inline-flex"><i class="bi bi-person-fill"></i> Login</a>
+        <button type="button" class="hamburger-btn" aria-label="Open Navigation Menu"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div class="nav-backdrop"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+        <img src="assets/images/common/lumi_logo.png" alt="LumiFrame Studio" style="height:36px;">
+        <span class="font-heading fw-bold" style="font-size:1.15rem; color:var(--heading-color);">LumiFrame Studio</span>
+      </a>
+      <button type="button" class="close-drawer-btn"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="nav-link">Home 1</a></li>
+      <li><a href="home2.html" class="nav-link">Home 2</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+      <li><a href="packages.html" class="nav-link">Packages</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <div class="mobile-drawer-toggles">
+        <button type="button" class="icon-toggle-btn theme-toggle-btn"><i class="bi bi-moon-stars-fill"></i></button>
+        <button type="button" class="icon-toggle-btn rtl-toggle-btn"><span class="rtl-label" style="font-size:0.75rem; font-weight:700;">RTL</span></button>
+      </div>
+      <a href="login.html" class="btn btn-primary-gold w-100 mt-2"><i class="bi bi-person-fill"></i> Login</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Compact Banner -->
+    <section class="site-banner inner-banner" style="background-image: url('assets/images/contact/banner.jpg');">
+      <div class="banner-overlay"></div>
+      <div class="container banner-content">
+        <span class="banner-subtitle animate-fade-up">Get In Touch</span>
+        <h1 class="banner-title animate-fade-up">Contact Us &amp; Date Availability</h1>
+        <ul class="banner-breadcrumb animate-fade-up">
+          <li><a href="index.html">Home</a></li>
+          <li class="separator">/</li>
+          <li class="active">Contact</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 1: Studio Contact Details & Channels -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Direct Communication</span>
+          <h2 class="section-title">Studio Contact Channels</h2>
+          <p class="section-description">Our studio concierge team is available Tuesday through Sunday to assist with date reservations and styling inquiries.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row g-4 row-cols-1 row-cols-md-4 text-center">
+          <div class="col animate-fade-up">
+            <div class="card-custom p-4">
+              <div class="card-icon-box mx-auto mb-3"><i class="bi bi-geo-alt-fill"></i></div>
+              <h3 class="h5 card-title-custom">Studio Address</h3>
+              <p class="card-text-custom mb-0">450 Portrait Way, Suite 800<br>San Francisco, CA 94108</p>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom p-4">
+              <div class="card-icon-box mx-auto mb-3"><i class="bi bi-telephone-fill"></i></div>
+              <h3 class="h5 card-title-custom">Phone &amp; WhatsApp</h3>
+              <p class="card-text-custom mb-0">+1 (415) 890-3421<br>Mon-Sun 8am - 8pm PST</p>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom p-4">
+              <div class="card-icon-box mx-auto mb-3"><i class="bi bi-envelope-fill"></i></div>
+              <h3 class="h5 card-title-custom">Email Inquiries</h3>
+              <p class="card-text-custom mb-0">concierge@lumiframestudio.com<br>Response within 24 hours</p>
+            </div>
+          </div>
+
+          <div class="col animate-fade-up">
+            <div class="card-custom p-4">
+              <div class="card-icon-box mx-auto mb-3"><i class="bi bi-clock-fill"></i></div>
+              <h3 class="h5 card-title-custom">Studio Hours</h3>
+              <p class="card-text-custom mb-0">Tue - Sun: 9:00 AM - 6:00 PM<br>(Monday By Appointment)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Comprehensive Date-Availability Booking Form -->
+    <section class="section-padding bg-surface-secondary">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="card-custom p-4 p-md-5 shadow-lg animate-fade-up">
+              <div class="text-center mb-4">
+                <span class="badge-tag card-tag mb-2">Reservation Request</span>
+                <h2 class="section-title">Check Date Availability &amp; Reserve</h2>
+                <p class="section-description">Fill out your preferred session details below. Our studio manager will check calendar availability and reach out immediately.</p>
+              </div>
+
+              <form id="bookingForm" class="needs-validation" novalidate>
+                <div class="row g-3">
+                  
+                  <!-- Full Name -->
+                  <div class="col-md-6 form-group">
+                    <label for="fullName" class="form-label-custom">Full Name <span class="text-danger">*</span></label>
+                    <div class="input-icon-group">
+                      <i class="bi bi-person"></i>
+                      <input type="text" class="form-control-custom" id="fullName" placeholder="e.g. Eleanor Vance" required>
+                    </div>
+                    <div class="invalid-feedback-custom">Please enter your full name.</div>
+                  </div>
+
+                  <!-- Email Address -->
+                  <div class="col-md-6 form-group">
+                    <label for="emailAddr" class="form-label-custom">Email Address <span class="text-danger">*</span></label>
+                    <div class="input-icon-group">
+                      <i class="bi bi-envelope"></i>
+                      <input type="email" class="form-control-custom" id="emailAddr" placeholder="e.g. eleanor@example.com" required>
+                    </div>
+                    <div class="invalid-feedback-custom">Please enter a valid email address.</div>
+                  </div>
+
+                  <!-- Phone Number -->
+                  <div class="col-md-6 form-group">
+                    <label for="phoneNum" class="form-label-custom">Phone Number <span class="text-danger">*</span></label>
+                    <div class="input-icon-group">
+                      <i class="bi bi-telephone"></i>
+                      <input type="tel" class="form-control-custom" id="phoneNum" placeholder="+1 (555) 000-0000" required>
+                    </div>
+                    <div class="invalid-feedback-custom">Please enter your phone number.</div>
+                  </div>
+
+                  <!-- Photography Service -->
+                  <div class="col-md-6 form-group">
+                    <label for="photoService" class="form-label-custom">Photography Service <span class="text-danger">*</span></label>
+                    <select class="form-select-custom" id="photoService" required>
+                      <option value="" selected disabled>Select a photography service...</option>
+                      <option value="family">Family Portraits</option>
+                      <option value="newborn">Newborn &amp; Infant Art</option>
+                      <option value="maternity">Maternity &amp; Pregnancy</option>
+                      <option value="children">Children &amp; Milestones</option>
+                      <option value="couples">Couples &amp; Engagement</option>
+                      <option value="corporate">Corporate Headshots</option>
+                      <option value="branding">Personal Branding</option>
+                    </select>
+                    <div class="invalid-feedback-custom">Please select a photography service.</div>
+                  </div>
+
+                  <!-- Preferred Date -->
+                  <div class="col-md-6 form-group">
+                    <label for="prefDate" class="form-label-custom">Preferred Date <span class="text-danger">*</span></label>
+                    <div class="input-icon-group">
+                      <i class="bi bi-calendar3"></i>
+                      <input type="date" class="form-control-custom" id="prefDate" required>
+                    </div>
+                    <div class="invalid-feedback-custom">Please select your preferred date.</div>
+                  </div>
+
+                  <!-- Alternative Date -->
+                  <div class="col-md-6 form-group">
+                    <label for="altDate" class="form-label-custom">Alternative Date</label>
+                    <div class="input-icon-group">
+                      <i class="bi bi-calendar-event"></i>
+                      <input type="date" class="form-control-custom" id="altDate">
+                    </div>
+                  </div>
+
+                  <!-- Preferred Session Type -->
+                  <div class="col-md-6 form-group">
+                    <label for="sessionType" class="form-label-custom">Preferred Session Type <span class="text-danger">*</span></label>
+                    <select class="form-select-custom" id="sessionType" required>
+                      <option value="" selected disabled>Select session time...</option>
+                      <option value="morning">Morning Golden Hour (8:30 AM - 11:30 AM)</option>
+                      <option value="afternoon">Afternoon Studio (1:00 PM - 4:00 PM)</option>
+                      <option value="sunset">Sunset Outdoor Golden Hour (5:00 PM - 7:30 PM)</option>
+                    </select>
+                    <div class="invalid-feedback-custom">Please select your preferred time.</div>
+                  </div>
+
+                  <!-- Studio or Outdoor Selection -->
+                  <div class="col-md-6 form-group">
+                    <label for="locationType" class="form-label-custom">Studio or Outdoor Selection <span class="text-danger">*</span></label>
+                    <select class="form-select-custom" id="locationType" required>
+                      <option value="" selected disabled>Select location...</option>
+                      <option value="studio">Indoor Studio Suite Only</option>
+                      <option value="outdoor">Outdoor Scenic Location Only</option>
+                      <option value="hybrid">Combined Studio &amp; Outdoor Session</option>
+                    </select>
+                    <div class="invalid-feedback-custom">Please select a location preference.</div>
+                  </div>
+
+                  <!-- Number of Participants -->
+                  <div class="col-md-12 form-group">
+                    <label for="participants" class="form-label-custom">Number of Participants <span class="text-danger">*</span></label>
+                    <div class="input-icon-group">
+                      <i class="bi bi-people"></i>
+                      <input type="number" class="form-control-custom" id="participants" min="1" max="25" placeholder="e.g. 4" required>
+                    </div>
+                    <div class="invalid-feedback-custom">Please specify the number of participants.</div>
+                  </div>
+
+                  <!-- Message -->
+                  <div class="col-md-12 form-group">
+                    <label for="messageText" class="form-label-custom">Session Notes or Special Wishes</label>
+                    <textarea class="form-control-custom" id="messageText" placeholder="Tell us about your family vision, children's ages, or special wardrobe preferences..."></textarea>
+                  </div>
+
+                  <!-- Consent Checkbox -->
+                  <div class="col-md-12">
+                    <div class="form-check-custom">
+                      <input type="checkbox" class="form-check-input-custom" id="consentCheck" required>
+                      <label for="consentCheck" class="form-check-label-custom">
+                        I agree to receive booking confirmation emails &amp; calls from LumiFrame Studio regarding my reservation request. <span class="text-danger">*</span>
+                      </label>
+                    </div>
+                    <div class="invalid-feedback-custom">You must agree before submitting.</div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="col-md-12 text-center mt-3">
+                    <button type="submit" class="btn btn-primary-gold btn-lg px-5"><i class="bi bi-send-fill"></i> Submit Date Availability Request</button>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Package Enquiry Form -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Quick Consultation</span>
+          <h2 class="section-title">3. Package &amp; Custom Quote Enquiry</h2>
+          <p class="section-description">Need a custom quote for large corporate teams or multi-day destination shoots? Send a quick message.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <form class="card-custom p-4 shadow-sm animate-fade-up">
+              <div class="row g-3">
+                <div class="col-md-6 form-group">
+                  <label class="form-label-custom">Your Name</label>
+                  <input type="text" class="form-control-custom" placeholder="Full name" required>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label class="form-label-custom">Email Address</label>
+                  <input type="email" class="form-control-custom" placeholder="Email address" required>
+                </div>
+                <div class="col-md-12 form-group">
+                  <label class="form-label-custom">Custom Request Details</label>
+                  <textarea class="form-control-custom" placeholder="Describe your custom photography needs..." required></textarea>
+                </div>
+                <div class="col-md-12 text-end">
+                  <button type="submit" class="btn btn-outline-gold">Send Quick Enquiry</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Store or Studio Location Details -->
+    <section class="section-padding bg-surface-secondary">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 animate-fade-up">
+            <span class="section-subtitle">Flagship Location</span>
+            <h2 class="section-title">Our San Francisco Studio Entrance</h2>
+            <p class="lead-text">Conveniently located in Nob Hill with private valet parking.</p>
+            <p class="card-text-custom">Our welcoming front lobby reception area provides complimentary refreshments, espresso, and private changing suites for a seamless arrival experience.</p>
+          </div>
+          <div class="col-lg-6 animate-fade-up">
+            <div class="card-custom">
+              <img src="assets/images/contact/studio-storefront.jpg" alt="LumiFrame Studio Entrance" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Business Hours & Viewing Suite -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 order-lg-2 animate-fade-up">
+            <span class="section-subtitle">Private Reveal Lounge</span>
+            <h2 class="section-title">4K Cinematic Viewing &amp; Reveal Suite</h2>
+            <p class="lead-text">Where your retouched portrait collection comes to life.</p>
+            <p class="card-text-custom">After your shoot, join us in our 4K cinematic projection room with comfortable leather seating to select your fine art prints and handcrafted albums.</p>
+          </div>
+          <div class="col-lg-6 order-lg-1 animate-fade-up">
+            <div class="card-custom">
+              <img src="assets/images/contact/consultation-room.jpg" alt="4K Projection Viewing Suite" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Studio Map & Directions Live Interactive Section -->
+    <section class="section-padding bg-surface-secondary text-center">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Find Us</span>
+          <h2 class="section-title">Studio Map &amp; Directions</h2>
+          <p class="section-description">450 Portrait Way, Suite 800, San Francisco, CA 94108</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="card-custom overflow-hidden shadow-lg animate-fade-up">
+          <div class="ratio ratio-21x9" style="min-height: 400px;">
+            <iframe 
+              src="https://maps.google.com/maps?q=450+Post+St,+San+Francisco,+CA+94102&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="LumiFrame Studio Live Google Map Location">
+            </iframe>
+          </div>
+          <div class="p-3 p-md-4 bg-surface d-flex flex-wrap align-items-center justify-content-between gap-3 border-top">
+            <div class="text-start">
+              <span class="fw-bold d-block text-heading font-heading" style="font-size: 1.05rem;"><i class="bi bi-geo-alt-fill text-gold me-2"></i>LumiFrame Fine Art Photography Studio</span>
+              <span class="text-muted small">450 Portrait Way, Suite 800, San Francisco, CA 94108 &bull; Valet Parking &amp; Private Elevator Access</span>
+            </div>
+            <a href="https://maps.google.com/?q=450+Post+St,+San+Francisco,+CA+94102" target="_blank" rel="noopener noreferrer" class="btn btn-primary-gold ms-auto ms-md-0">
+              <i class="bi bi-compass-fill"></i> Get Live Directions
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: Frequently Asked Questions Accordion -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header text-center animate-fade-up">
+          <span class="section-subtitle">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-description">Find answers to common questions about preparing for your portrait session.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8 animate-fade-up">
+            <div class="accordion custom-accordion" id="faqAccordion">
+              
+              <div class="accordion-item bg-transparent border-color my-2">
+                <h3 class="accordion-header" id="headingOne">
+                  <button class="accordion-button font-heading fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    How far in advance should I book my session?
+                  </button>
+                </h3>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body card-text-custom">
+                    We recommend reserving weekend dates 3 to 6 weeks in advance. For newborn sessions, we recommend tentative booking based on your due date during your second trimester.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item bg-transparent border-color my-2">
+                <h3 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed font-heading fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    What happens if it rains on our scheduled outdoor shoot date?
+                  </button>
+                </h3>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body card-text-custom">
+                    In the event of inclement weather, we can either transition your session to our 2,500 sq. ft. daylight studio suite or reschedule to the next available sunny outdoor date at no additional fee.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item bg-transparent border-color my-2">
+                <h3 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed font-heading fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Do you provide hair and makeup artists?
+                  </button>
+                </h3>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body card-text-custom">
+                    Yes! We have dedicated hair and makeup artists available in our private studio green room as an optional add-on or included in our Platinum packages.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item bg-transparent border-color my-2">
+                <h3 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed font-heading fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Can we bring our family pet to the shoot?
+                  </button>
+                </h3>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body card-text-custom">
+                    Absolutely! Dogs and family pets are welcome members of your family. Please notify us during booking so we set up pet-friendly studio backdrops.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item bg-transparent border-color my-2">
+                <h3 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed font-heading fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    How long until our retouched gallery is ready?
+                  </button>
+                </h3>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body card-text-custom">
+                    Standard portrait digital galleries are delivered within 10 business days. Corporate headshots offer an express 48-hour delivery timeline.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8 (CTA SECTION): Final Booking CTA -->
+    <section class="section-padding text-center position-relative overflow-hidden" style="background: url('assets/images/contact/cta-bg.jpg') center/cover no-repeat;">
+      <div class="banner-overlay" style="opacity:0.85;"></div>
+      <div class="container position-relative z-2">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 animate-fade-up">
+            <span class="section-subtitle text-gold">We Look Forward To Meeting You</span>
+            <h2 class="text-white font-heading display-5 fw-bold mb-3">Reserve Your Session Date Today</h2>
+            <p class="text-light mb-4 lead-text">Speak directly with our concierge team at +1 (415) 890-3421 or submit the booking form above.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="#bookingForm" class="btn btn-primary-gold"><i class="bi bi-arrow-up-circle-fill"></i> Back To Booking Form</a>
+              <a href="packages.html" class="btn btn-outline-gold text-white"><i class="bi bi-tag-fill"></i> View Session Packages</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 animate-fade-up">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="assets/images/common/lumi_logo.png" alt="LumiFrame Studio" class="footer-brand-img mb-0">
+            <span class="font-heading fw-bold text-white fs-4">LumiFrame Studio</span>
+          </div>
+          <p class="footer-desc">LumiFrame Studio is a premier portrait photography studio dedicated to creating heirloom fine art imagery for families, newborns, maternity, and business leaders.</p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="social-icon-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-icon-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 animate-fade-up">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html">About Studio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 animate-fade-up">
+          <h3 class="footer-heading">Photography Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html">Family Legacy Portraits</a></li>
+            <li><a href="services.html">Newborn &amp; Infant Art</a></li>
+            <li><a href="services.html">Maternity Fine Art</a></li>
+            <li><a href="services.html">Children &amp; Milestones</a></li>
+            <li><a href="services.html">Couples &amp; Engagements</a></li>
+            <li><a href="services.html">Executive Headshots</a></li>
+            <li><a href="services.html">Personal Branding</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 animate-fade-up">
+          <h3 class="footer-heading">Studio Info &amp; Hours</h3>
+          <ul class="footer-contact-info mb-3">
+            <li><i class="bi bi-geo-alt-fill"></i> 450 Portrait Way, Suite 800, San Francisco, CA</li>
+            <li><i class="bi bi-telephone-fill"></i> +1 (415) 890-3421</li>
+            <li><i class="bi bi-envelope-fill"></i> concierge@lumiframestudio.com</li>
+            <li><i class="bi bi-clock-fill"></i> Tue - Sun: 9:00 AM - 6:00 PM (Mon Closed)</li>
+          </ul>
+          <form class="footer-newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom animate-fade-up">
+        <p class="mb-0">&copy; 2026 LumiFrame Studio. All Rights Reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Studio Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/portfolio.js"></script>
+  <script src="assets/js/booking.js"></script>
+</body>
+</html>

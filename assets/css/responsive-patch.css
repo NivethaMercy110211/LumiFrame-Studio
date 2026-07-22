@@ -1,0 +1,349 @@
+/* ==========================================================================
+   LumiFrame Studio — Global Responsive Patch
+   Applied last in stylesheet cascade to override & fix any responsive issues.
+   Covers: table overflow, package comparison, accordion, contact form grid,
+   spacing utilities, z-index stacking, touch targets, image sizing.
+   ========================================================================== */
+
+/* ─── Ensure all images stay within bounds ─── */
+img,
+video,
+svg,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ─── Live Map Iframe Styling ─── */
+.card-custom iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+[data-theme="dark"] .card-custom iframe,
+html[data-bs-theme="dark"] .card-custom iframe {
+  filter: invert(90%) hue-rotate(180deg) contrast(110%);
+}
+
+/* ─── Responsive Header Navigation & Offcanvas Controls (<1200px) ─── */
+@media (max-width: 1199.98px) {
+  /* iPad Pro, iPad Mini & Mobile: Keep ALL menu pages inside offcanvas menu drawer */
+  .main-nav {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    display: flex !important;
+  }
+
+  /* Keep Theme, RTL toggles, and Login button INSIDE menu drawer on responsive viewports */
+  .header-controls .theme-toggle-btn,
+  .header-controls .rtl-toggle-btn,
+  .btn-header-login {
+    display: none !important;
+  }
+}
+
+/* ─── Prevent any element from causing horizontal scroll ─── */
+.container,
+.row,
+section,
+main,
+article,
+.card-custom,
+.portfolio-card {
+  max-width: 100%;
+}
+
+/* ─── Bootstrap table: always scrollable on narrow screens ─── */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-md);
+}
+
+.table {
+  min-width: 600px;  /* table won't collapse below this */
+  margin-bottom: 0;
+}
+
+/* ─── Custom accordion styling ─── */
+.accordion-item {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-sm) !important;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.accordion-button {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  background: var(--bg-card) !important;
+  padding: 18px 22px;
+  border: none;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--primary-color);
+  background: var(--bg-surface-secondary) !important;
+}
+
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23C5A059' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  width: 18px;
+  height: 18px;
+  background-size: 100%;
+}
+
+.accordion-body {
+  padding: 18px 22px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  background: var(--bg-card);
+}
+
+/* ─── Horizontal overflow on specific sections ─── */
+.section-padding,
+.section-padding-sm {
+  overflow-x: hidden;
+}
+
+/* ─── Bootstrap rows with gutter fix ─── */
+.row.g-4 {
+  overflow: visible;  /* allow card shadow to show */
+}
+
+/* ─── Full-width CTA section overlay fix ─── */
+.position-relative.overflow-hidden {
+  /* Already set, but ensure content width is constrained */
+  overflow: hidden !important;
+}
+
+/* ─── Service page: grid auto-fills nicely ─── */
+@media (max-width: 767.98px) {
+  /* Pricing card flex column stack */
+  .card-custom .card-price-tag {
+    text-align: center;
+  }
+
+  .card-custom .card-price-amount {
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  /* Packages comparison table text */
+  .table th,
+  .table td {
+    font-size: 0.78rem;
+    padding: 9px 6px;
+    vertical-align: middle;
+  }
+}
+
+/* ─── Contact form grid: full width fields on mobile ─── */
+@media (max-width: 575.98px) {
+  .col-md-6,
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* ─── Z-Index stacking safety ─── */
+.site-header { z-index: 1050; }
+.nav-backdrop { z-index: 1080; }
+.mobile-nav-drawer { z-index: 1090; }
+.lightbox-modal { z-index: 2000; }
+.lightbox-btn { z-index: 2010; }
+.auth-overlay { z-index: 1; }
+.auth-top-controls { z-index: 10; }
+.auth-card-container { z-index: 5; }
+
+/* ─── Utility: make stacked CTA button groups flex-wrap ─── */
+.d-flex.gap-3.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+/* ─── Touch device: increase gap between tappable items ─── */
+@media (hover: none) and (pointer: coarse) {
+  .footer-links {
+    gap: 14px;
+  }
+
+  .social-login-group {
+    gap: 14px;
+  }
+
+  .banner-cta-group {
+    gap: 14px;
+  }
+
+  .portfolio-filter-bar {
+    gap: 10px;
+  }
+}
+
+/* ─── Packages page: force col-lg-6 full width on tablet ─── */
+@media (max-width: 991.98px) {
+  .justify-content-center > .col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* ─── Map image responsive ─── */
+.card-custom img.img-fluid {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Auth: ensure branding doesn't exceed card ─── */
+.auth-branding img {
+  max-width: 100%;
+}
+
+/* ─── Prevent whitespace nowrap from causing overflow on small screens ─── */
+@media (max-width: 479.98px) {
+  .btn {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .badge-tag {
+    word-break: break-word;
+    white-space: normal;
+  }
+}
+
+/* ─── Feature Split Section & Approach Responsive Content Alignment ─── */
+/* Target Viewports: 1920x1080, 1440x900, 1024x1366, 768x1024, 360x740 */
+
+.feature-img-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  max-height: 520px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  background-color: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.feature-img-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card-meta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card-meta-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.card-meta-list li i {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* 1920x1080 & 1440x900 (Widescreen Desktop & Laptop) */
+@media (min-width: 1200px) {
+  .feature-split-row {
+    align-items: center;
+  }
+  .feature-img-card {
+    min-height: 440px;
+    max-height: 480px;
+  }
+}
+
+/* 1024x1366 (iPad Pro / Tablet Portrait - 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .feature-split-row {
+    align-items: center;
+  }
+  .feature-img-card {
+    min-height: 420px;
+    max-height: 460px;
+  }
+  .card-meta-list li {
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+}
+
+/* 768x1024 (Tablet Portrait - 768px to 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .feature-split-row {
+    row-gap: 2rem !important;
+  }
+  .feature-img-card {
+    min-height: 360px;
+    max-height: 400px;
+  }
+  .feature-split-section .col-lg-6 {
+    text-align: left;
+  }
+  .card-meta-list {
+    gap: 12px;
+  }
+}
+
+/* 360x740 (Mobile Viewport - < 767.98px) */
+@media (max-width: 767.98px) {
+  .feature-split-row {
+    row-gap: 1.75rem !important;
+  }
+  .feature-img-card {
+    min-height: 250px;
+    max-height: 300px;
+    border-radius: var(--radius-md);
+  }
+  .card-meta-list {
+    gap: 12px;
+  }
+  .card-meta-list li {
+    font-size: 0.88rem;
+    gap: 10px;
+  }
+  .card-meta-list li i {
+    font-size: 1rem;
+    margin-top: 2px;
+  }
+}

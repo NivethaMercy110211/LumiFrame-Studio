@@ -1,0 +1,167 @@
+/* ==========================================================================
+   LumiFrame Studio - Forms & Input Controls Stylesheet
+   Floating Labels, Form Validation, Date Picker, Checkbox
+   Touch-friendly: min-height 48px, font-size 16px to prevent iOS zoom
+   ========================================================================== */
+
+.form-group {
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.form-label-custom {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--heading-color);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-control-custom,
+.form-select-custom {
+  width: 100%;
+  padding: 14px 18px;
+  font-family: var(--font-body);
+  /* 16px minimum prevents iOS Safari from zooming on focus */
+  font-size: max(16px, 0.95rem);
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  outline: none;
+  /* Touch-friendly height */
+  min-height: 48px;
+  /* Prevent horizontal overflow */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.form-control-custom:focus,
+.form-select-custom:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.2);
+  background-color: var(--bg-surface);
+}
+
+.form-control-custom::placeholder {
+  color: var(--text-light);
+}
+
+textarea.form-control-custom {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+/* Icon Inside Input Field */
+.input-icon-group {
+  position: relative;
+}
+
+.input-icon-group i {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.input-icon-group .form-control-custom {
+  padding-left: 48px;
+}
+
+/* For textarea, icon should align to top */
+.input-icon-group:has(textarea) i {
+  top: 18px;
+  transform: none;
+}
+
+/* Custom Checkbox */
+.form-check-custom {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.form-check-input-custom {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;   /* prevent shrinking in flex */
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--bg-surface);
+  cursor: pointer;
+  margin-top: 2px;
+  display: grid;
+  place-content: center;
+  transition: all var(--transition-fast);
+}
+
+.form-check-input-custom::before {
+  content: '\F26E';
+  font-family: 'bootstrap-icons';
+  font-size: 14px;
+  color: #FFFFFF;
+  transform: scale(0);
+  transition: transform 0.15s ease-in-out;
+}
+
+.form-check-input-custom:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.form-check-input-custom:checked::before {
+  transform: scale(1);
+}
+
+.form-check-label-custom {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Validation Messages */
+.invalid-feedback-custom {
+  display: none;
+  font-size: 0.8rem;
+  color: #E74C3C;
+  margin-top: 6px;
+}
+
+.was-validated .form-control-custom:invalid ~ .invalid-feedback-custom,
+.form-group.has-error .invalid-feedback-custom {
+  display: block;
+}
+
+.was-validated .form-control-custom:invalid,
+.form-group.has-error .form-control-custom {
+  border-color: #E74C3C;
+}
+
+/* ─── Responsive Form Adjustments ─── */
+
+/* Select dropdown — ensure full width on mobile */
+.form-select-custom {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23C5A059' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 42px;
+}

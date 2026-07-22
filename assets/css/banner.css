@@ -1,0 +1,249 @@
+/* ==========================================================================
+   LumiFrame Studio - Hero & Inner Banner Stylesheet
+   Universal Hero Banner vs Inner Compact Banner
+   Fully responsive with fluid typography
+   ========================================================================== */
+
+.site-banner {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Home 1 & Home 2 Hero Banner Height */
+.hero-banner {
+  height: var(--banner-hero-height);
+  min-height: 520px;
+}
+
+/* Internal Pages Compact Banner Height */
+.inner-banner {
+  height: var(--banner-inner-height);
+  min-height: 280px;
+}
+
+/* Overlay & Content Container */
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.55) 0%, rgba(10, 10, 10, 0.85) 100%);
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  color: #FFFFFF !important;
+  width: 100%;   /* Ensure content fills container width */
+}
+
+/* Guarantee Hero Banner High-Contrast Visibility */
+.site-banner .banner-title {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.site-banner .banner-lead {
+  color: #F0F0F0 !important;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.site-banner .banner-subtitle {
+  color: var(--primary-color) !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.site-banner .badge-tag {
+  background: rgba(14, 14, 14, 0.8) !important;
+  color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color) !important;
+  backdrop-filter: blur(8px);
+}
+
+.site-banner .home2-stat-item {
+  color: #FFFFFF !important;
+  font-weight: 500;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.site-banner .btn-outline-gold {
+  background-color: rgba(14, 14, 14, 0.45);
+  color: #FFFFFF !important;
+  border-color: var(--primary-color);
+  backdrop-filter: blur(4px);
+}
+
+.site-banner .btn-outline-gold:hover {
+  background-color: var(--primary-color);
+  color: #FFFFFF !important;
+  border-color: var(--primary-color);
+}
+
+.inner-banner .banner-content {
+  text-align: center;
+}
+
+.banner-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--primary-color);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.banner-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.banner-lead {
+  font-size: clamp(0.92rem, 2vw, 1.15rem);
+  font-weight: 300;
+  color: #E0E0E0;
+  max-width: 650px;
+  margin-bottom: 30px;
+}
+
+.inner-banner .banner-lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Breadcrumb Styling for Inner Pages */
+.banner-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  padding: 6px 18px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--radius-pill);
+  margin-top: 16px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  flex-wrap: wrap;       /* allow wrapping on narrow screens */
+}
+
+.banner-breadcrumb a {
+  color: #DDDDDD;
+}
+
+.banner-breadcrumb a:hover {
+  color: var(--primary-color);
+}
+
+.banner-breadcrumb .active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.banner-breadcrumb .separator {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================================================================
+   Home 2 Editorial Showcase Banner Layout
+   ========================================================================== */
+
+.home2-editorial-banner {
+  min-height: 640px;
+  height: auto;
+  padding: 100px 0 80px 0;
+}
+
+.home2-hero-preview-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), var(--shadow-gold);
+  background: rgba(22, 22, 22, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 12px;
+  transform: rotate(1.5deg);
+  transition: transform 0.6s var(--ease-silk), box-shadow 0.6s var(--ease-silk);
+}
+
+.home2-hero-preview-card:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), var(--shadow-gold);
+}
+
+.home2-hero-preview-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  display: block;
+}
+
+.home2-hero-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: rgba(14, 14, 14, 0.85);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(8px);
+  z-index: 2;
+}
+
+.home2-hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  flex-wrap: wrap;
+}
+
+.home2-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #DDDDDD;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.home2-stat-item i {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}

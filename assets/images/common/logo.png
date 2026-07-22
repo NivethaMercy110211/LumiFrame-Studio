@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 70" width="260" height="70">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFBA6D"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#9E7B35"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(10, 10)">
+    <!-- Aperture Camera Logo Mark -->
+    <circle cx="25" cy="25" r="23" fill="none" stroke="url(#goldGrad)" stroke-width="2.5"/>
+    <circle cx="25" cy="25" r="8" fill="none" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <path d="M25 2 L38 18 M48 25 L32 38 M25 48 L12 32 M2 25 L18 12" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.8"/>
+  </g>
+  <!-- Brand Name Typography -->
+  <text x="70" y="36" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" fill="url(#goldGrad)" letter-spacing="2">LUMIFRAME</text>
+  <text x="72" y="52" font-family="'Montserrat', sans-serif" font-size="9" font-weight="500" fill="#A0A0A0" letter-spacing="4">STUDIO &amp; PORTRAITS</text>
+</svg>

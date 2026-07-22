@@ -1,0 +1,50 @@
+/* ==========================================================================
+   LumiFrame Studio — Desktop Viewport Stylesheet (≥1440px)
+   ========================================================================== */
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1360px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .main-nav {
+    gap: 32px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .site-banner.hero-banner {
+    height: 640px;
+  }
+
+  .banner-title {
+    font-size: 4rem;
+  }
+
+  .section-padding {
+    padding: 100px 0;
+  }
+
+  .section-title {
+    font-size: 2.75rem;
+  }
+}
+
+/* ─── Ultra-wide (≥1920px) ─── */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1680px;
+  }
+
+  .site-banner.hero-banner {
+    height: 700px;
+  }
+
+  .banner-title {
+    font-size: 4.5rem;
+  }
+}

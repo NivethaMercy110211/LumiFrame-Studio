@@ -1,0 +1,155 @@
+/* ==========================================================================
+   LumiFrame Studio - Buttons & Badges Stylesheet
+   Luxury Gold Buttons, Touch-Friendly Targets, Focus Rings, Badge Styling
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: 1px solid transparent;
+  outline: none;
+  text-decoration: none;
+  line-height: 1;
+  /* Touch-friendly minimum hit target */
+  min-height: 44px;
+  /* Prevent text overflow in buttons */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Keyboard Focus State */
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary-color) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.3) !important;
+}
+
+/* Prevent hover lift on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .btn:hover {
+    transform: none;
+  }
+}
+
+/* Primary Button (Gold Solid) */
+.btn-primary-gold {
+  background-color: var(--primary-color);
+  color: #FFFFFF !important;
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary-gold:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+  color: #FFFFFF !important;
+}
+
+/* Secondary Button (Outline Gold) */
+.btn-outline-gold {
+  background-color: transparent;
+  color: var(--heading-color) !important;
+  border-color: var(--primary-color);
+}
+
+.site-banner .btn-outline-gold {
+  color: #FFFFFF !important;
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--primary-color);
+  color: #FFFFFF !important;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Image CTA sections sit on dark overlays in both themes. */
+.section-padding.position-relative.overflow-hidden .btn-outline-gold.text-white {
+  background-color: rgba(14, 14, 14, 0.36);
+  color: #FFFFFF !important;
+  border-color: var(--primary-color);
+}
+
+.section-padding.position-relative.overflow-hidden .btn-outline-gold.text-white:hover {
+  background-color: var(--primary-color);
+  color: #FFFFFF !important;
+  border-color: var(--primary-color);
+}
+
+/* Highlighted Header Login Button CTA */
+.btn-header-login {
+  background-color: var(--primary-color);
+  color: #FFFFFF !important;
+  border: 1px solid var(--primary-color);
+  padding: 10px 22px;
+  font-size: 0.82rem;
+  border-radius: var(--radius-pill);
+  min-height: 40px;
+  box-shadow: var(--shadow-gold);
+  transition: all var(--transition-fast);
+}
+
+.btn-header-login:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(197, 160, 89, 0.35);
+}
+
+/* Filter Pills & Category Tags */
+.btn-filter-pill {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  width: auto !important;
+  min-height: 40px;
+  white-space: nowrap;
+}
+
+.btn-filter-pill:hover,
+.btn-filter-pill.active {
+  background-color: var(--primary-color);
+  color: #FFFFFF !important;
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Icon Only Button */
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+/* Allow wrapping in banner CTA groups */
+.banner-cta-group .btn {
+  white-space: normal;
+}

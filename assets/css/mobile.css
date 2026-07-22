@@ -1,0 +1,481 @@
+/* ==========================================================================
+   LumiFrame Studio — Mobile Viewport Stylesheet
+   Breakpoints: max-width 767.98px  |  Target: 360×740 & all small phones
+   Fixes: no horizontal scroll, touch targets ≥44px, responsive typography,
+          responsive images, consistent spacing, proper nav/RTL behaviour
+   ========================================================================== */
+
+/* ─── Base overflow guard ─── */
+@media (max-width: 767.98px) {
+  html, body {
+    overflow-x: clip;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Ensure every child stays within viewport */
+  *, *::before, *::after {
+    max-width: 100%;
+  }
+
+  /* Bootstrap container — full bleed with adequate padding */
+  .container,
+  .container-fluid {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* ─── Header / Navbar ─── */
+  .site-header {
+    height: 64px;
+  }
+
+  .header-container {
+    gap: 8px;
+  }
+
+  .header-brand img.brand-logo {
+    height: 34px;
+  }
+
+  /* Ensure main-nav is always hidden on mobile */
+  .main-nav {
+    display: none !important;
+  }
+
+  /* Hamburger always visible on mobile */
+  .hamburger-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  /* Login button hidden on very small screens to avoid overflow */
+  .btn-header-login {
+    display: none !important;
+  }
+
+  /* Toggle controls — compact spacing */
+  .header-controls {
+    gap: 8px;
+  }
+
+  .icon-toggle-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+
+  /* ─── Mobile Drawer ─── */
+  .mobile-nav-drawer {
+    width: min(300px, 85vw);
+  }
+
+  .mobile-nav-links .nav-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  /* ─── Hero / Inner Banners ─── */
+  .site-banner.hero-banner {
+    height: 430px;
+    min-height: 360px;
+  }
+
+  .site-banner.inner-banner {
+    height: 230px;
+    min-height: 190px;
+  }
+
+  /* Responsive Banner Typography */
+  .banner-title {
+    font-size: clamp(1.6rem, 8vw, 2.25rem);
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+
+  .banner-subtitle {
+    font-size: 0.72rem;
+    letter-spacing: 2.5px;
+  }
+
+  .banner-lead {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  .banner-cta-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .banner-breadcrumb {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    flex-wrap: wrap;
+  }
+
+  /* ─── Section Spacing & Typography ─── */
+  .section-padding {
+    padding: 48px 0;
+  }
+
+  .section-padding-sm {
+    padding: 36px 0;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    line-height: 1.25;
+  }
+
+  .section-subtitle {
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+  }
+
+  .section-description {
+    font-size: 0.95rem;
+  }
+
+  /* ─── Typography Headings ─── */
+  h1, .h1 { font-size: clamp(1.8rem, 9vw, 2.6rem); }
+  h2, .h2 { font-size: clamp(1.5rem, 7vw, 2rem); }
+  h3, .h3 { font-size: clamp(1.2rem, 5.5vw, 1.6rem); }
+  h4, .h4 { font-size: clamp(1.05rem, 4.5vw, 1.3rem); }
+
+  .lead-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* ─── Cards ─── */
+  .card-body-custom {
+    padding: 18px 16px;
+  }
+
+  .card-title-custom {
+    font-size: 1.15rem;
+  }
+
+  .card-text-custom {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+
+  /* Full-width cards on mobile, with rounded corners intact */
+  .card-custom {
+    border-radius: 10px;
+  }
+
+  /* Card hover lift disabled on touch devices (prevents sticky hover states) */
+  @media (hover: none) {
+    .card-custom:hover {
+      transform: none;
+    }
+  }
+
+  /* ─── Buttons — touch-friendly minimum 44px hit target ─── */
+  .btn {
+    min-height: 44px;
+    padding: 12px 20px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    width: 100%;           /* full-width on mobile by default */
+    justify-content: center;
+  }
+
+  /* Exceptions: filter pills stay auto-width */
+  .btn-filter-pill {
+    width: auto !important;
+    min-height: 40px;
+    padding: 8px 14px;
+    font-size: 0.76rem;
+  }
+
+  /* Card footer buttons — already full-width, keep */
+  .card-footer-custom .btn {
+    width: 100%;
+  }
+
+  /* Banner CTA group — wrap nicely */
+  .banner-cta-group .btn {
+    width: auto;           /* override global for banner area */
+    min-width: 180px;
+  }
+
+  /* ─── Grid Layouts ─── */
+  /* Force single column for all row variants on mobile */
+  .row-cols-1,
+  .row-cols-sm-1 {
+    --bs-columns: 1;
+  }
+
+  /* 2-col portrait showcase is OK on wide phones (≥480) */
+  @media (min-width: 480px) {
+    .row-cols-2.force-2-portrait > .col {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  /* ─── Portfolio Gallery ─── */
+  .portfolio-filter-bar {
+    gap: 6px;
+    justify-content: flex-start;
+    overflow-x: auto;           /* horizontal scroll for pills row */
+    overflow-y: hidden;
+    flex-wrap: nowrap;          /* single row with scroll, avoids layout break */
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-bottom: 28px;
+  }
+
+  .portfolio-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Prevent pill overflow */
+  .btn-filter-pill {
+    flex-shrink: 0;
+  }
+
+  /* ─── Lightbox ─── */
+  .lightbox-content-wrapper {
+    max-width: 96vw;
+    max-height: 90vh;
+  }
+
+  .lightbox-img {
+    max-height: 65vh;
+  }
+
+  .lightbox-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .lightbox-close-btn {
+    top: 14px;
+    right: 14px;
+  }
+
+  .lightbox-prev-btn {
+    left: 8px;
+  }
+
+  .lightbox-next-btn {
+    right: 8px;
+  }
+
+  .lightbox-caption {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  /* ─── Footer ─── */
+  .site-footer {
+    padding-top: 52px;
+  }
+
+  .footer-newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-newsletter-form input,
+  .footer-newsletter-form button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    margin-top: 36px;
+  }
+
+  .footer-social-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .social-icon-link {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* ─── Forms ─── */
+  .form-control-custom,
+  .form-select-custom {
+    font-size: 16px;    /* prevents iOS zoom on focus */
+    min-height: 48px;
+    padding: 12px 16px;
+  }
+
+  .input-icon-group .form-control-custom {
+    padding-left: 44px;
+    font-size: 16px;
+  }
+
+  .input-icon-group i {
+    left: 14px;
+  }
+
+  textarea.form-control-custom {
+    min-height: 110px;
+  }
+
+  .form-check-custom {
+    gap: 10px;
+  }
+
+  .form-check-input-custom {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  /* ─── Auth Pages ─── */
+  .auth-wrapper {
+    padding: 60px 16px 30px;
+    align-items: center;
+  }
+
+  .auth-card-container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .auth-card {
+    padding: 28px 20px;
+    border-radius: 14px;
+  }
+
+  .auth-title {
+    font-size: 1.55rem;
+  }
+
+  .auth-top-controls {
+    top: 14px;
+    right: 14px;
+    gap: 8px;
+  }
+
+  .auth-top-controls .icon-toggle-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Social login buttons on auth */
+  .btn-social-login {
+    min-height: 44px;
+    font-size: 0.85rem;
+  }
+
+  /* ─── Quote / Blockquote ─── */
+  blockquote.quote-artistic {
+    padding: 20px 22px;
+    font-size: 1.1rem;
+  }
+
+  /* ─── Table Responsive ─── */
+  .table-responsive {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .table th,
+  .table td {
+    font-size: 0.82rem;
+    padding: 10px 8px;
+  }
+
+  /* ─── Accordion ─── */
+  .accordion-button {
+    font-size: 0.92rem;
+    padding: 14px 16px;
+  }
+
+  .accordion-body {
+    font-size: 0.9rem;
+    padding: 14px 16px;
+  }
+
+  /* ─── Utility overrides ─── */
+  /* Card icon box — smaller on mobile */
+  .card-icon-box {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+  }
+
+  /* Price amount */
+  .card-price-amount {
+    font-size: 1.65rem;
+  }
+
+  /* Pricing card flex column stack */
+  .card-custom .d-flex.justify-content-between {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start !important;
+  }
+
+  /* Ensure images are always responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Prevent overflow on row with nested content */
+  .row {
+    --bs-gutter-x: 16px;
+  }
+
+  /* Remove horizontal overflow from specific sections */
+  section {
+    overflow-x: hidden;
+  }
+}
+
+/* ─── Very small phones (≤359px) ─── */
+@media (max-width: 359px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .banner-title {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+  }
+
+  .auth-card {
+    padding: 22px 14px;
+  }
+
+  .btn {
+    font-size: 0.75rem;
+    padding: 11px 16px;
+  }
+}

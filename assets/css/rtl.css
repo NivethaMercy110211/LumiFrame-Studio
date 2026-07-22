@@ -1,0 +1,255 @@
+/* ==========================================================================
+   LumiFrame Studio - RTL (Right-To-Left) Direction Stylesheet
+   Direction Swapping for Header, Cards, Forms, Footer, Badges
+   Fully compatible with mobile, tablet, and desktop breakpoints
+   ========================================================================== */
+
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ─── Section headers & dividers ─── */
+html[dir="rtl"] .section-header.text-start .gold-divider {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+html[dir="rtl"] .section-subtitle {
+  letter-spacing: 2px; /* Reduce spacing for RTL languages */
+}
+
+/* ─── Header Navigation ─── */
+html[dir="rtl"] .header-container {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .main-nav {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .header-controls {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-link::after {
+  left: auto;
+  right: 0;
+}
+
+/* ─── Mobile Drawer — slide from LEFT in RTL ─── */
+html[dir="rtl"] .mobile-nav-drawer {
+  right: auto;
+  left: -100%;
+  transition: left var(--transition-normal);
+}
+
+html[dir="rtl"] .mobile-nav-drawer.open {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .mobile-drawer-header {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .mobile-nav-links {
+  text-align: right;
+}
+
+/* ─── Forms & Inputs ─── */
+html[dir="rtl"] .input-icon-group i {
+  left: auto;
+  right: 18px;
+}
+
+html[dir="rtl"] .input-icon-group .form-control-custom {
+  padding-left: 18px;
+  padding-right: 48px;
+  text-align: right;
+}
+
+html[dir="rtl"] .form-check-custom {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+html[dir="rtl"] .form-check-label-custom {
+  text-align: right;
+}
+
+/* ─── Cards & Content ─── */
+html[dir="rtl"] .card-body-custom {
+  text-align: right;
+}
+
+html[dir="rtl"] .card-meta-list li {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .card-meta-list {
+  text-align: right;
+}
+
+html[dir="rtl"] .card-icon-box {
+  margin-right: 0;
+}
+
+/* ─── Banner ─── */
+html[dir="rtl"] .banner-cta-group {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+html[dir="rtl"] .inner-banner .banner-content {
+  text-align: center; /* Stay centered for inner pages */
+}
+
+html[dir="rtl"] .banner-breadcrumb {
+  flex-direction: row-reverse;
+}
+
+/* ─── Footer ─── */
+html[dir="rtl"] .footer-heading::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .footer-links {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-links a {
+  padding-left: 0;
+  display: block;
+}
+
+html[dir="rtl"] .footer-links a:hover {
+  padding-left: 0;
+  padding-right: 6px;
+}
+
+html[dir="rtl"] .footer-contact-info li {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-social-links {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .footer-bottom {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-newsletter-form {
+  flex-direction: row-reverse;
+}
+
+/* ─── Auth Pages ─── */
+html[dir="rtl"] .auth-top-controls {
+  right: auto;
+  left: 24px;
+}
+
+html[dir="rtl"] .auth-card {
+  text-align: right;
+}
+
+html[dir="rtl"] .auth-title,
+html[dir="rtl"] .auth-subtitle {
+  text-align: center; /* keep centered for branding */
+}
+
+html[dir="rtl"] .auth-divider {
+  direction: ltr; /* keep divider lines symmetric */
+}
+
+html[dir="rtl"] .auth-footer-links {
+  text-align: center;
+}
+
+/* ─── Portfolio ─── */
+html[dir="rtl"] .portfolio-view-icon {
+  right: auto;
+  left: 20px;
+}
+
+html[dir="rtl"] .portfolio-overlay {
+  text-align: right;
+}
+
+html[dir="rtl"] .portfolio-filter-bar {
+  flex-direction: row-reverse;
+}
+
+/* ─── Lightbox ─── */
+html[dir="rtl"] .lightbox-caption {
+  direction: rtl;
+}
+
+/* ─── Blockquote ─── */
+html[dir="rtl"] blockquote.quote-artistic {
+  border-left: none;
+  border-right: 3px solid var(--primary-color);
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+  text-align: right;
+}
+
+/* ─── Section alignment helpers (two-column layouts) ─── */
+html[dir="rtl"] .order-lg-1 { order: 2; }
+html[dir="rtl"] .order-lg-2 { order: 1; }
+
+/* ─── Accordion ─── */
+html[dir="rtl"] .accordion-button {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+html[dir="rtl"] .accordion-button::after {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .accordion-body {
+  text-align: right;
+}
+
+/* ─── Badge ─── */
+html[dir="rtl"] .badge-tag {
+  letter-spacing: 0.5px;
+}
+
+/* ─── Tables ─── */
+html[dir="rtl"] .table {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ─── Breadcrumb ─── */
+html[dir="rtl"] .banner-breadcrumb .separator {
+  transform: scaleX(-1);
+}
+
+/* ─── RTL + Mobile corrections ─── */
+@media (max-width: 767.98px) {
+  html[dir="rtl"] .auth-top-controls {
+    right: auto;
+    left: 14px;
+  }
+
+  html[dir="rtl"] .banner-cta-group {
+    align-items: flex-end;
+  }
+
+  html[dir="rtl"] .input-icon-group i {
+    left: auto;
+    right: 14px;
+  }
+
+  html[dir="rtl"] .input-icon-group .form-control-custom {
+    padding-left: 16px;
+    padding-right: 44px;
+  }
+}
