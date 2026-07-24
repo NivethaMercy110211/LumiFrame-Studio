@@ -21,9 +21,13 @@
   /* Bootstrap container — full bleed with adequate padding */
   .container,
   .container-fluid {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
   }
+
 
   /* ─── Header / Navbar ─── */
   .site-header {
@@ -233,25 +237,35 @@
 
   /* ─── Portfolio Gallery ─── */
   .portfolio-filter-bar {
-    gap: 6px;
-    justify-content: flex-start;
-    overflow-x: auto;           /* horizontal scroll for pills row */
-    overflow-y: hidden;
-    flex-wrap: nowrap;          /* single row with scroll, avoids layout break */
-    padding-bottom: 8px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    margin-bottom: 28px;
-  }
-
-  .portfolio-filter-bar::-webkit-scrollbar {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 8px;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 5;
+    width: 100%;
   }
 
   /* Prevent pill overflow */
   .btn-filter-pill {
+    width: auto !important;
+    max-width: 100%;
     flex-shrink: 0;
+    white-space: nowrap;
+    margin: 0;
+    font-size: 0.78rem;
+    padding: 8px 14px;
+    min-height: 38px;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
+
+
 
   /* ─── Lightbox ─── */
   .lightbox-content-wrapper {
@@ -445,8 +459,12 @@
   }
 
   /* Prevent overflow on row with nested content */
-  .row {
-    --bs-gutter-x: 16px;
+  .row,
+  .row[class*="g-"],
+  .row[class*="gx-"] {
+    --bs-gutter-x: 16px !important;
+    margin-left: calc(-0.5 * var(--bs-gutter-x)) !important;
+    margin-right: calc(-0.5 * var(--bs-gutter-x)) !important;
   }
 
   /* Remove horizontal overflow from specific sections */
@@ -458,9 +476,10 @@
 /* ─── Very small phones (≤359px) ─── */
 @media (max-width: 359px) {
   .container {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
+
 
   .banner-title {
     font-size: 1.5rem;

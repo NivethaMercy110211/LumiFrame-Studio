@@ -121,10 +121,15 @@
 
 /* ─── iPad Mini (768px–991px): grid centering odd last cards ─── */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .container {
-    padding-left: 24px;
-    padding-right: 24px;
+  .container,
+  .container-fluid {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
   }
+
 
   /* Fluid banner title */
   .banner-title {
@@ -177,12 +182,16 @@
 }
 
 /* ─── iPad Pro / Large Tablet (1024px–1199px) ─── */
-@media (min-width: 1024px) and (max-width: 1199.98px) {
-  .container {
-    padding-left: 28px;
-    padding-right: 28px;
-    max-width: 980px;
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container,
+  .container-fluid {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
   }
+
 
   /* iPad Pro: keep all menu pages inside the menu drawer like iPad Mini */
   .main-nav {

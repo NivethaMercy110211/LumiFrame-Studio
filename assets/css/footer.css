@@ -189,9 +189,9 @@
 .footer-bottom {
   margin-top: 60px;
   padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 0.85rem;
-  color: #777777;
+  color: #CCCCCC;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -200,13 +200,19 @@
   overflow-wrap: break-word;
 }
 
+.footer-bottom p {
+  color: #CCCCCC;
+  margin-bottom: 0;
+}
+
 .footer-bottom a {
-  color: #999999;
+  color: #B5B5C0;
 }
 
 .footer-bottom a:hover {
   color: var(--primary-color);
 }
+
 
 /* ─── Responsive Footer ─── */
 

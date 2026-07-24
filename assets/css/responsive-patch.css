@@ -30,6 +30,7 @@ html[data-bs-theme="dark"] .card-custom iframe {
 
 /* ─── Responsive Header Navigation & Offcanvas Controls (<1200px) ─── */
 @media (max-width: 1199.98px) {
+
   /* iPad Pro, iPad Mini & Mobile: Keep ALL menu pages inside offcanvas menu drawer */
   .main-nav {
     display: none !important;
@@ -66,7 +67,8 @@ article,
 }
 
 .table {
-  min-width: 600px;  /* table won't collapse below this */
+  min-width: 600px;
+  /* table won't collapse below this */
   margin-bottom: 0;
 }
 
@@ -117,7 +119,8 @@ article,
 
 /* ─── Bootstrap rows with gutter fix ─── */
 .row.g-4 {
-  overflow: visible;  /* allow card shadow to show */
+  overflow: visible;
+  /* allow card shadow to show */
 }
 
 /* ─── Full-width CTA section overlay fix ─── */
@@ -128,6 +131,7 @@ article,
 
 /* ─── Service page: grid auto-fills nicely ─── */
 @media (max-width: 767.98px) {
+
   /* Pricing card flex column stack */
   .card-custom .card-price-tag {
     text-align: center;
@@ -150,6 +154,7 @@ article,
 
 /* ─── Contact form grid: full width fields on mobile ─── */
 @media (max-width: 575.98px) {
+
   .col-md-6,
   .col-md-12 {
     flex: 0 0 100%;
@@ -158,14 +163,37 @@ article,
 }
 
 /* ─── Z-Index stacking safety ─── */
-.site-header { z-index: 1050; }
-.nav-backdrop { z-index: 1080; }
-.mobile-nav-drawer { z-index: 1090; }
-.lightbox-modal { z-index: 2000; }
-.lightbox-btn { z-index: 2010; }
-.auth-overlay { z-index: 1; }
-.auth-top-controls { z-index: 10; }
-.auth-card-container { z-index: 5; }
+.site-header {
+  z-index: 1050;
+}
+
+.nav-backdrop {
+  z-index: 1080;
+}
+
+.mobile-nav-drawer {
+  z-index: 1090;
+}
+
+.lightbox-modal {
+  z-index: 2000;
+}
+
+.lightbox-btn {
+  z-index: 2010;
+}
+
+.auth-overlay {
+  z-index: 1;
+}
+
+.auth-top-controls {
+  z-index: 10;
+}
+
+.auth-card-container {
+  z-index: 5;
+}
 
 /* ─── Utility: make stacked CTA button groups flex-wrap ─── */
 .d-flex.gap-3.flex-wrap {
@@ -193,7 +221,7 @@ article,
 
 /* ─── Packages page: force col-lg-6 full width on tablet ─── */
 @media (max-width: 991.98px) {
-  .justify-content-center > .col-lg-6 {
+  .justify-content-center>.col-lg-6 {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -287,6 +315,7 @@ article,
   .feature-split-row {
     align-items: center;
   }
+
   .feature-img-card {
     min-height: 440px;
     max-height: 480px;
@@ -298,10 +327,12 @@ article,
   .feature-split-row {
     align-items: center;
   }
+
   .feature-img-card {
     min-height: 420px;
     max-height: 460px;
   }
+
   .card-meta-list li {
     font-size: 0.9rem;
     gap: 10px;
@@ -313,13 +344,16 @@ article,
   .feature-split-row {
     row-gap: 2rem !important;
   }
+
   .feature-img-card {
     min-height: 360px;
     max-height: 400px;
   }
+
   .feature-split-section .col-lg-6 {
     text-align: left;
   }
+
   .card-meta-list {
     gap: 12px;
   }
@@ -330,20 +364,1249 @@ article,
   .feature-split-row {
     row-gap: 1.75rem !important;
   }
+
   .feature-img-card {
     min-height: 250px;
     max-height: 300px;
     border-radius: var(--radius-md);
   }
+
   .card-meta-list {
     gap: 12px;
   }
+
   .card-meta-list li {
     font-size: 0.88rem;
     gap: 10px;
   }
+
   .card-meta-list li i {
     font-size: 1rem;
     margin-top: 2px;
   }
 }
+
+/* ─── Mobile Viewport 360x740 Symmetrical Even Padding Enforcement ─── */
+@media (max-width: 767.98px) {
+
+  /* Guard full page width and prevent asymmetric horizontal overflow */
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Force exact, equal left and right padding on all Bootstrap containers */
+  .container,
+  .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Normalize row negative horizontal margins and column paddings for balanced 16px screen edge inset */
+  .row,
+  .row[class*="g-"],
+  .row[class*="gx-"] {
+    --bs-gutter-x: 16px !important;
+    margin-left: calc(-0.5 * var(--bs-gutter-x)) !important;
+    margin-right: calc(-0.5 * var(--bs-gutter-x)) !important;
+    width: calc(100% + var(--bs-gutter-x)) !important;
+    max-width: calc(100% + var(--bs-gutter-x)) !important;
+    box-sizing: border-box !important;
+  }
+
+  .row>[class*="col-"],
+  .row>.col {
+    padding-left: calc(0.5 * var(--bs-gutter-x)) !important;
+    padding-right: calc(0.5 * var(--bs-gutter-x)) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Ensure headers, banners, sections, cards and footers retain even horizontal margins */
+  .site-header,
+  .header-container,
+  .site-banner,
+  .banner-content,
+  .site-footer,
+  section,
+  main,
+  article,
+  .card-custom,
+  .auth-card {
+    box-sizing: border-box !important;
+  }
+
+  .header-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* ─── Portfolio Gallery Filter Bar & Grid Overlap Alignment Fix ─── */
+  .portfolio-filter-bar {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    row-gap: 10px !important;
+    column-gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 4px !important;
+    margin-bottom: 32px !important;
+    position: relative !important;
+    z-index: 5 !important;
+    box-sizing: border-box !important;
+  }
+
+  .portfolio-filter-bar .btn-filter-pill {
+    width: auto !important;
+    max-width: 100% !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+    font-size: 0.78rem !important;
+    padding: 8px 14px !important;
+    min-height: 38px !important;
+    line-height: 1.2 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+
+  #portfolioGrid {
+    position: relative !important;
+    z-index: 1 !important;
+    clear: both !important;
+    margin-top: 0 !important;
+    --bs-gutter-y: 20px !important;
+  }
+
+  #portfolioGrid>.portfolio-item {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    margin-bottom: 0 !important;
+  }
+
+  #portfolioGrid>.portfolio-item.hide {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    overflow: hidden !important;
+  }
+
+  .portfolio-card {
+    position: relative !important;
+    width: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    min-height: 240px !important;
+    border-radius: var(--radius-md) !important;
+    overflow: hidden !important;
+  }
+
+  .testimonial-grid .testimonial-quote {
+    font-size: 0.88rem !important;
+    line-height: 1.65 !important;
+  }
+}
+
+/* ─── Global Footer Copyright Text Visibility Fix for Dark Theme ─── */
+.footer-bottom,
+.footer-bottom p,
+[data-theme="dark"] .footer-bottom,
+[data-theme="dark"] .footer-bottom p,
+html[data-bs-theme="dark"] .footer-bottom,
+html[data-bs-theme="dark"] .footer-bottom p {
+  color: #D5D5DC !important;
+  opacity: 1 !important;
+}
+
+.footer-bottom a,
+[data-theme="dark"] .footer-bottom a,
+html[data-bs-theme="dark"] .footer-bottom a {
+  color: #B5B5C0 !important;
+  opacity: 1 !important;
+}
+
+.footer-bottom a:hover,
+[data-theme="dark"] .footer-bottom a:hover,
+html[data-bs-theme="dark"] .footer-bottom a:hover {
+  color: var(--primary-color) !important;
+}
+
+/* ─── Tablet Viewport 768x1024 Symmetrical Even Padding Enforcement ─── */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  /* Guard full page width and prevent asymmetric horizontal overflow */
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Force exact, equal left and right padding on all Bootstrap containers */
+  .container,
+  .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Normalize row negative horizontal margins and column paddings for balanced 24px screen edge inset */
+  .row,
+  .row[class*="g-"],
+  .row[class*="gx-"] {
+    --bs-gutter-x: 24px !important;
+    margin-left: calc(-0.5 * var(--bs-gutter-x)) !important;
+    margin-right: calc(-0.5 * var(--bs-gutter-x)) !important;
+    width: calc(100% + var(--bs-gutter-x)) !important;
+    max-width: calc(100% + var(--bs-gutter-x)) !important;
+    box-sizing: border-box !important;
+  }
+
+  .row>[class*="col-"],
+  .row>.col {
+    padding-left: calc(0.5 * var(--bs-gutter-x)) !important;
+    padding-right: calc(0.5 * var(--bs-gutter-x)) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Ensure headers, banners, sections, cards and footers retain even horizontal margins */
+  .site-header,
+  .header-container,
+  .site-banner,
+  .banner-content,
+  .site-footer,
+  section,
+  main,
+  article,
+  .card-custom,
+  .auth-card {
+    box-sizing: border-box !important;
+  }
+
+  .header-container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+/* ─── iPad Pro / Large Tablet Viewport 1024x1366 Symmetrical Even Padding Enforcement ─── */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  /* Guard full page width and prevent asymmetric horizontal overflow */
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Force exact, equal left and right padding on all Bootstrap containers */
+  .container,
+  .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Normalize row negative horizontal margins and column paddings for balanced 32px screen edge inset */
+  .row,
+  .row[class*="g-"],
+  .row[class*="gx-"] {
+    --bs-gutter-x: 24px !important;
+    margin-left: calc(-0.5 * var(--bs-gutter-x)) !important;
+    margin-right: calc(-0.5 * var(--bs-gutter-x)) !important;
+    width: calc(100% + var(--bs-gutter-x)) !important;
+    max-width: calc(100% + var(--bs-gutter-x)) !important;
+    box-sizing: border-box !important;
+  }
+
+  .row>[class*="col-"],
+  .row>.col {
+    padding-left: calc(0.5 * var(--bs-gutter-x)) !important;
+    padding-right: calc(0.5 * var(--bs-gutter-x)) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Ensure headers, banners, sections, cards and footers retain even horizontal margins */
+  .site-header,
+  .header-container,
+  .site-banner,
+  .banner-content,
+  .site-footer,
+  section,
+  main,
+  article,
+  .card-custom,
+  .auth-card {
+    box-sizing: border-box !important;
+  }
+
+  .header-container {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+}
+
+/* ─── Desktop & Laptop (min-width: 992px) Uncropped Portfolio & Blog Card Images ─── */
+@media (min-width: 992px) {
+  .portfolio-card {
+    height: 380px !important;
+    min-height: 380px !important;
+    max-height: 420px !important;
+    overflow: hidden !important;
+  }
+
+  .portfolio-card img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+  }
+
+  .card-img-wrapper {
+    min-height: 360px !important;
+    max-height: 480px !important;
+    aspect-ratio: 16 / 9 !important;
+    overflow: hidden !important;
+  }
+
+  .card-img-wrapper img,
+  .blog-card img,
+  .card-custom > img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+  }
+}
+
+
+/* iPad Mini (768x1024) & Tablet Image Grid & Top-Aligned Uncropped Positioning */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .section-padding .row.align-items-center .col-lg-6 .card-custom,
+  .section-padding .row.align-items-center .col-md-6 .card-custom,
+  .feature-img-card {
+    max-width: 100% !important;
+    max-height: 520px !important;
+    height: auto !important;
+  }
+
+  .section-padding .row.align-items-center .col-lg-6 .card-custom img,
+  .section-padding .row.align-items-center .col-md-6 .card-custom img,
+  .feature-img-card img {
+    max-height: 520px !important;
+    height: 440px !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+    width: 100% !important;
+  }
+
+  .card-img-wrapper {
+    min-height: 380px !important;
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  .card-img-wrapper.portrait-ratio {
+    min-height: 440px !important;
+    aspect-ratio: 4 / 5 !important;
+  }
+
+  .card-img-wrapper img,
+  .portfolio-card img,
+  .card-custom img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+  }
+
+/* ─── Tablet & iPad Pro (768x1024 & 1024x1366) 2+1 Centered Odd Grid Layout ─── */
+@media (min-width: 768px) and (max-width: 1366px) {
+  .row-cols-md-3,
+  .row-cols-lg-3,
+  .testimonial-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    margin-left: -12px !important;
+    margin-right: -12px !important;
+  }
+
+  .row-cols-md-3 > *,
+  .row-cols-lg-3 > *,
+  .testimonial-grid > .col,
+  .testimonial-grid > [class*="col"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    margin-bottom: 24px !important;
+    display: flex !important;
+  }
+
+  .row-cols-md-3 .card-custom,
+  .row-cols-lg-3 .card-custom,
+  .testimonial-grid .card-custom {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* iPad Pro (768x1024 & 1024x1366) 4-Card Section Grids 2-by-2 Alignment */
+  .row-cols-md-4,
+  .row-cols-lg-4,
+  .row-cols-xl-4 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin-left: -12px !important;
+    margin-right: -12px !important;
+  }
+
+  .row-cols-md-4 > *,
+  .row-cols-lg-4 > *,
+  .row-cols-xl-4 > * {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    margin-bottom: 24px !important;
+    display: flex !important;
+  }
+
+  /* iPad Mini (768x1024) - Home 2 "The Studio Photography Experience" Section ONLY 1-by-1 Stacked Alignment */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .studio-experience-grid > * {
+      flex: 0 0 100% !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+  }
+
+  /* Center the 3rd card on line 2 for 3-item odd grids */
+  .row-cols-md-3 > :nth-child(3):last-child,
+  .row-cols-lg-3 > :nth-child(3):last-child,
+  .testimonial-grid > :nth-child(3):last-child {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+
+
+  /* iPad Pro (1024x1366 Viewport ONLY) - Home 2 Session Pricing Preview Neutral Centered Tick Points List */
+  @media (min-width: 1024px) and (max-width: 1366px) {
+    .session-pricing-section .card-meta-list {
+      display: inline-flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      text-align: left !important;
+      width: auto !important;
+      max-width: 90% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    .session-pricing-section .card-meta-list li {
+      text-align: left !important;
+      justify-content: flex-start !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding-left: 0 !important;
+      margin-bottom: 8px !important;
+    }
+
+    .session-pricing-section .card-meta-list li i {
+      position: static !important;
+      margin-right: 0 !important;
+      flex-shrink: 0 !important;
+    }
+  }
+
+
+  /* ─── Studio Contact Channels 2-by-2 Equal Height Grid for iPad Mini & iPad Pro ─── */
+  @media (min-width: 768px) and (max-width: 1366px) {
+    .contact-channels-grid {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      margin-left: -12px !important;
+      margin-right: -12px !important;
+    }
+
+    .contact-channels-grid > .col,
+    .contact-channels-grid > [class*="col"] {
+      flex: 0 0 50% !important;
+      max-width: 50% !important;
+      width: 50% !important;
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+      margin-bottom: 24px !important;
+      display: flex !important;
+    }
+
+    .contact-channels-grid .card-custom {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 200px !important;
+      padding: 24px 18px !important;
+    }
+
+    .contact-channels-grid .card-title-custom {
+      min-height: calc(1.3em * 2) !important;
+      max-height: calc(1.3em * 2) !important;
+      line-height: 1.3 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin-bottom: 10px !important;
+    }
+
+    .contact-channels-grid .card-text-custom {
+      margin-top: auto !important;
+    }
+  }
+
+  /* iPad Pro (768x1024 & 1024x1366) Footer 2-by-2 Grid Alignment */
+  @media (min-width: 768px) and (max-width: 1366px) {
+    .site-footer .row {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      margin-left: -16px !important;
+      margin-right: -16px !important;
+    }
+
+    .site-footer .row > [class*="col-"] {
+      flex: 0 0 50% !important;
+      max-width: 50% !important;
+      width: 50% !important;
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+      margin-bottom: 32px !important;
+    }
+  }
+
+
+  /* iPad Pro (992px - 1366px) Every Grid Card Heading Reserved 2 Lines Alignment */
+  .card-title-custom,
+  .card-title,
+  .portfolio-item-title,
+  .blog-card-title,
+  .card-body-custom h3,
+  .card-body-custom h4,
+  .card-custom h3,
+  .card-custom h4 {
+    min-height: calc(1.3em * 2) !important;
+    max-height: calc(1.3em * 2) !important;
+
+    line-height: 1.3 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+}
+
+
+/* ─── Client Testimonials & Reviews Name, Stars & Avatar Explicit Full Visibility ─── */
+.testimonial-grid .card-custom {
+  overflow: visible !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  padding: 24px !important;
+}
+
+.testimonial-grid .d-flex.align-items-center {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin-bottom: 16px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.testimonial-grid .testimonial-avatar {
+  width: 54px !important;
+  height: 54px !important;
+  min-width: 54px !important;
+  min-height: 54px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.testimonial-grid h4,
+.testimonial-grid .h5 {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  margin: 0 0 4px 0 !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+[data-theme="light"] .testimonial-grid h4,
+[data-theme="light"] .testimonial-grid .h5,
+html[data-bs-theme="light"] .testimonial-grid h4,
+html[data-bs-theme="light"] .testimonial-grid .h5 {
+  color: #121212 !important;
+}
+
+[data-theme="dark"] .testimonial-grid h4,
+[data-theme="dark"] .testimonial-grid .h5,
+html[data-bs-theme="dark"] .testimonial-grid h4,
+html[data-bs-theme="dark"] .testimonial-grid .h5 {
+  color: #FFFFFF !important;
+}
+
+.testimonial-grid small.text-gold,
+.testimonial-grid .text-gold {
+  color: #C5A059 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+  font-size: 0.85rem !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.testimonial-grid small.text-gold i,
+.testimonial-grid .text-gold i {
+  color: #C5A059 !important;
+  font-size: 0.85rem !important;
+  display: inline-block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.testimonial-grid .testimonial-quote {
+  font-size: 0.98rem !important;
+  line-height: 1.6 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+
+
+
+
+
+
+@media (max-width: 767.98px) {
+  .section-padding .row.align-items-center .col-lg-6 .card-custom {
+    max-width: 95% !important;
+    max-height: 320px !important;
+  }
+
+  .section-padding .row.align-items-center .col-lg-6 .card-custom img {
+    max-height: 320px !important;
+  }
+}
+
+
+/* ─── Home 2 Hero Banner Uncropped Preview Image ─── */
+.home2-hero-preview-card img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 520px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* ─── Logo Box Background Removal & High Contrast Theme Support ─── */
+.header-brand img.brand-logo,
+.mobile-drawer-header img,
+.footer-brand-img,
+img.brand-logo,
+img.footer-brand-img,
+img[src*="lumi_logo"],
+img[src*="lumi_icon"],
+img[src*="logo"] {
+  background-color: transparent !important;
+  background: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  object-fit: contain !important;
+}
+
+[data-theme="light"] .header-brand img.brand-logo,
+[data-theme="light"] .footer-brand-img,
+[data-theme="light"] .mobile-drawer-header img,
+html[data-theme="light"] img[src*="lumi_logo"] {
+  mix-blend-mode: multiply !important;
+  filter: contrast(1.15) brightness(0.9) !important;
+}
+
+[data-theme="dark"] .header-brand img.brand-logo,
+[data-theme="dark"] .footer-brand-img,
+[data-theme="dark"] .mobile-drawer-header img,
+html[data-theme="dark"] img[src*="lumi_logo"] {
+  mix-blend-mode: normal !important;
+  filter: drop-shadow(0 0 4px rgba(229, 193, 124, 0.5)) !important;
+}
+
+/* ─── Fix Home 2 Mobile Hero Banner Clipping & Half Hidden Image Bug ─── */
+@media (max-width: 991.98px) {
+
+  .site-banner.home2-editorial-banner,
+  .hero-banner.home2-editorial-banner {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-top: 100px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .home2-editorial-banner .container,
+  .home2-editorial-banner .banner-content {
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  .home2-hero-preview-card {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 30px auto 0 auto !important;
+    transform: rotate(0deg) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(197, 160, 89, 0.3) !important;
+  }
+
+  .home2-hero-preview-card img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 380px !important;
+    min-height: 250px !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+    border-radius: var(--radius-md) !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+
+  .site-banner.home2-editorial-banner,
+  .hero-banner.home2-editorial-banner {
+    padding-top: 90px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .home2-hero-preview-card {
+    max-width: 100% !important;
+    margin: 24px auto 0 auto !important;
+  }
+
+  .home2-hero-preview-card img {
+    max-height: 320px !important;
+    min-height: 220px !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+  }
+
+  .home2-hero-badge {
+    top: 14px !important;
+    right: 14px !important;
+    font-size: 0.7rem !important;
+    padding: 4px 10px !important;
+  }
+}
+
+/* ─── Packages Page Mobile Content Alignment Refinement ─── */
+@media (max-width: 767.98px) {
+
+  /* Package card body spacing and flex alignment */
+  .card-body-custom {
+    padding: 22px 18px !important;
+    text-align: left;
+  }
+
+  /* Title and Price row alignment on mobile */
+  .card-body-custom .d-flex.justify-content-between {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .card-title-custom {
+    font-size: 1.2rem !important;
+    margin-bottom: 4px !important;
+    word-break: break-word;
+  }
+
+  .card-price-amount {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: var(--primary-color) !important;
+  }
+
+  /* Stacked Heading First then Description inside package cards on mobile */
+  .card-meta-list {
+    padding-left: 0 !important;
+    margin-top: 16px !important;
+    margin-bottom: 20px !important;
+    list-style: none !important;
+  }
+
+  .card-meta-list li {
+    display: block !important;
+    position: relative !important;
+    padding-left: 30px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 14px !important;
+    color: var(--text-main) !important;
+    text-align: left !important;
+  }
+
+  .card-meta-list li i {
+    position: absolute !important;
+    top: 2px !important;
+    left: 0 !important;
+    color: var(--primary-color) !important;
+    font-size: 1.15rem !important;
+  }
+
+  .card-meta-list li strong {
+    display: block !important;
+    color: var(--heading-color) !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 3px !important;
+  }
+
+
+
+
+  /* Full width button in package cards on mobile */
+  .card-footer-custom {
+    margin-top: auto !important;
+    padding-top: 12px !important;
+  }
+
+  .card-footer-custom .btn {
+    width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+    padding: 12px 16px !important;
+  }
+
+  /* Addon cards alignment */
+  .card-custom.text-center.p-4 {
+    padding: 20px 16px !important;
+  }
+
+  .card-custom.text-center.p-4 img {
+    max-height: 180px !important;
+    object-fit: cover !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+
+/* ─── Universal Sticky Header Guarantee Across All Viewports (Mobile, iPad Mini & iPad Pro) ─── */
+.site-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 1080 !important;
+  background-color: var(--bg-header) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+
+  /* ─── Explicit High-Contrast Form Check Checkbox & Label Styling ─── */
+  .form-check-custom {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .form-check-label-custom {
+    font-size: 0.9rem !important;
+    color: var(--heading-color) !important;
+    line-height: 1.4 !important;
+    cursor: pointer !important;
+    opacity: 1 !important;
+  }
+
+  .form-check-label-custom a,
+  .form-check-label-custom a.text-gold {
+    color: var(--primary-color) !important;
+    font-weight: 600 !important;
+    text-decoration: underline !important;
+  }
+
+  .form-check-label-custom a:hover {
+    color: var(--primary-hover) !important;
+  }
+
+  /* ─── Auth Page Light & Dark Theme Contrast & High-Visibility Control Buttons ─── */
+  .auth-top-controls {
+    position: absolute !important;
+    top: 16px !important;
+    right: 16px !important;
+    z-index: 9999 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  [data-theme="light"] .auth-wrapper,
+  html[data-bs-theme="light"] .auth-wrapper {
+    background-color: #E2E2E8 !important;
+  }
+
+  [data-theme="light"] .auth-overlay,
+  html[data-bs-theme="light"] .auth-overlay {
+    background: linear-gradient(135deg, #E2E2E8 0%, #D6D6DF 100%) !important;
+  }
+
+  [data-theme="light"] .auth-card,
+  html[data-bs-theme="light"] .auth-card {
+    background: #EAEAEF !important;
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08), 0 0 25px rgba(197, 160, 89, 0.15) !important;
+    color: #121212 !important;
+  }
+
+
+  /* Light Theme Floating Theme Buttons: Desktop Glassmorphic Style Across All Screens */
+  [data-theme="light"] .auth-top-controls .icon-toggle-btn,
+  html[data-bs-theme="light"] .auth-top-controls .icon-toggle-btn,
+  [data-theme="light"] .auth-top-controls button,
+  html[data-bs-theme="light"] .auth-top-controls button {
+    background: rgba(0, 0, 0, 0.08) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.18) !important;
+    color: #121212 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  [data-theme="light"] .auth-top-controls .icon-toggle-btn i,
+  html[data-bs-theme="light"] .auth-top-controls .icon-toggle-btn i,
+  [data-theme="light"] .auth-top-controls button i,
+  html[data-bs-theme="light"] .auth-top-controls button i,
+  [data-theme="light"] .auth-top-controls span,
+  html[data-bs-theme="light"] .auth-top-controls span {
+    color: #121212 !important;
+  }
+
+  [data-theme="light"] .auth-top-controls .icon-toggle-btn:hover,
+  html[data-bs-theme="light"] .auth-top-controls .icon-toggle-btn:hover {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #FFFFFF !important;
+  }
+
+  [data-theme="light"] .auth-top-controls .icon-toggle-btn:hover i,
+  html[data-bs-theme="light"] .auth-top-controls .icon-toggle-btn:hover i {
+    color: #FFFFFF !important;
+  }
+
+  /* Dark Theme Floating Theme Buttons: Desktop Glassmorphic Style Across All Screens */
+  [data-theme="dark"] .auth-top-controls .icon-toggle-btn,
+  html[data-bs-theme="dark"] .auth-top-controls .icon-toggle-btn,
+  [data-theme="dark"] .auth-top-controls button,
+  html[data-bs-theme="dark"] .auth-top-controls button {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  [data-theme="dark"] .auth-top-controls .icon-toggle-btn i,
+  html[data-bs-theme="dark"] .auth-top-controls .icon-toggle-btn i,
+  [data-theme="dark"] .auth-top-controls button i,
+  html[data-bs-theme="dark"] .auth-top-controls button i,
+  [data-theme="dark"] .auth-top-controls span,
+  html[data-bs-theme="dark"] .auth-top-controls span {
+    color: #FFFFFF !important;
+  }
+
+  [data-theme="dark"] .auth-top-controls .icon-toggle-btn:hover,
+  html[data-bs-theme="dark"] .auth-top-controls .icon-toggle-btn:hover {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #0E0E0E !important;
+  }
+
+  [data-theme="dark"] .auth-top-controls .icon-toggle-btn:hover i,
+  html[data-bs-theme="dark"] .auth-top-controls .icon-toggle-btn:hover i {
+    color: #0E0E0E !important;
+  }
+
+
+  @media (max-width: 1024px) {
+    .auth-wrapper .auth-branding {
+      margin-bottom: 10px !important;
+      margin-top: 2px !important;
+    }
+
+    [data-theme="light"] .auth-wrapper,
+    html[data-bs-theme="light"] .auth-wrapper {
+      background-color: #E2E2E8 !important;
+      padding: 20px 16px !important;
+    }
+
+    [data-theme="light"] .auth-overlay,
+    html[data-bs-theme="light"] .auth-overlay {
+      background: linear-gradient(135deg, #E2E2E8 0%, #D6D6DF 100%) !important;
+    }
+
+    [data-theme="light"] .auth-card,
+    html[data-bs-theme="light"] .auth-card {
+      background: #EAEAEF !important;
+      border: 1px solid rgba(0, 0, 0, 0.12) !important;
+      padding: 24px 18px !important;
+      border-radius: var(--radius-md) !important;
+    }
+  }
+
+  /* ─── Permanent Structural Fix for Mobile Auth Controls & Branding Overlap ─── */
+  @media (max-width: 767.98px) {
+    .auth-wrapper {
+      padding-top: 16px !important;
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+      padding-bottom: 24px !important;
+    }
+
+    .auth-top-controls {
+      position: relative !important;
+      top: 0 !important;
+      right: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      max-width: 480px !important;
+      margin: 0 auto 12px auto !important;
+      display: flex !important;
+      justify-content: flex-end !important;
+      align-items: center !important;
+      gap: 8px !important;
+      z-index: 100 !important;
+    }
+
+    .auth-wrapper .auth-branding {
+      margin-top: 0 !important;
+      margin-bottom: 16px !important;
+      text-align: center !important;
+    }
+
+    .auth-branding a {
+      display: inline-flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 12px !important;
+      flex-wrap: nowrap !important;
+    }
+
+    .auth-branding img {
+      height: 44px !important;
+      width: auto !important;
+      max-width: 180px !important;
+    }
+
+    .auth-branding span {
+      font-size: 1.45rem !important;
+      font-weight: 700 !important;
+      line-height: 1.2 !important;
+      white-space: nowrap !important;
+    }
+  }
+
+
+
+
+
+
+  [data-theme="light"] .auth-title,
+  html[data-bs-theme="light"] .auth-title,
+  [data-theme="light"] .form-label-custom,
+  html[data-bs-theme="light"] .form-label-custom,
+  [data-theme="light"] .auth-branding span,
+  html[data-bs-theme="light"] .auth-branding span {
+    color: #121212 !important;
+  }
+
+  [data-theme="light"] .auth-subtitle,
+  html[data-bs-theme="light"] .auth-subtitle,
+  [data-theme="light"] .form-check-label-custom,
+  html[data-bs-theme="light"] .form-check-label-custom,
+  [data-theme="light"] .auth-footer-links,
+  html[data-bs-theme="light"] .auth-footer-links,
+  [data-theme="light"] .auth-footer-links span,
+  html[data-bs-theme="light"] .auth-footer-links span {
+    color: #333333 !important;
+  }
+
+  [data-theme="light"] .form-control-custom,
+  html[data-bs-theme="light"] .form-control-custom {
+    background-color: #FFFFFF !important;
+    color: #121212 !important;
+    border: 1px solid #CCCCCC !important;
+  }
+
+  [data-theme="light"] .form-control-custom::placeholder,
+  html[data-bs-theme="light"] .form-control-custom::placeholder {
+    color: #666666 !important;
+  }
+
+  /* Auth Page Dark Theme Explicit Rules */
+  [data-theme="dark"] .auth-overlay,
+  html[data-bs-theme="dark"] .auth-overlay {
+    background: linear-gradient(135deg, rgba(14, 14, 14, 0.8) 0%, rgba(14, 14, 14, 0.94) 100%) !important;
+  }
+
+  [data-theme="dark"] .auth-card,
+  html[data-bs-theme="dark"] .auth-card {
+    background: rgba(20, 20, 22, 0.92) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(197, 160, 89, 0.2) !important;
+    color: #FFFFFF !important;
+  }
+
+  [data-theme="dark"] .auth-title,
+  html[data-bs-theme="dark"] .auth-title,
+  [data-theme="dark"] .form-label-custom,
+  html[data-bs-theme="dark"] .form-label-custom,
+  [data-theme="dark"] .auth-branding span,
+  html[data-bs-theme="dark"] .auth-branding span {
+    color: #FFFFFF !important;
+  }
+
+  [data-theme="dark"] .auth-subtitle,
+  html[data-bs-theme="dark"] .auth-subtitle,
+  [data-theme="dark"] .form-check-label-custom,
+  html[data-bs-theme="dark"] .form-check-label-custom,
+  [data-theme="dark"] .auth-footer-links,
+  html[data-bs-theme="dark"] .auth-footer-links,
+  [data-theme="dark"] .auth-footer-links span,
+  html[data-bs-theme="dark"] .auth-footer-links span {
+    color: #E0E0E0 !important;
+  }
+
+  [data-theme="dark"] .form-control-custom,
+  html[data-bs-theme="dark"] .form-control-custom {
+    background-color: #121214 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #2A2A30 !important;
+  }
+
+  /* ─── Universal Mobile Banner Top & Bottom Padding Refinement ─── */
+  @media (max-width: 991.98px) {
+    .site-banner,
+    .hero-banner,
+    .inner-banner,
+    .home2-editorial-banner {
+      padding-top: 110px !important;
+      padding-bottom: 70px !important;
+      height: auto !important;
+      min-height: auto !important;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .site-banner,
+    .hero-banner,
+    .inner-banner,
+    .home2-editorial-banner {
+      padding-top: 115px !important;
+      padding-bottom: 75px !important;
+      height: auto !important;
+      min-height: auto !important;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .site-banner,
+    .hero-banner,
+    .inner-banner,
+    .home2-editorial-banner {
+      padding-top: 120px !important;
+      padding-bottom: 80px !important;
+      height: auto !important;
+      min-height: auto !important;
+    }
+  }
+
+
+  /* ─── Zero Flicker / Zero Blinking Theme Switching Guard ─── */
+  html.theme-switching,
+  html.theme-switching *,
+  html.theme-switching *::before,
+  html.theme-switching *::after {
+    transition: none !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }

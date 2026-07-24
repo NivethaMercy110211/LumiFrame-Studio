@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LumiFrame Studio - Theme Toggle Controller (Light / Dark)
+   LumiFrame Studio - Theme Toggle Controller (Instant Flicker-Free Transition)
    ========================================================================== */
 
 (function () {
@@ -13,13 +13,17 @@
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
-  function applyTheme(theme) {
+  function applyTheme(theme, disableTransition = false) {
+    if (disableTransition) {
+      document.documentElement.classList.add('theme-switching');
+    }
+
     document.documentElement.setAttribute('data-theme', theme);
     document.documentElement.setAttribute('data-bs-theme', theme);
     localStorage.setItem(STORAGE_KEY, theme);
 
     // Update Theme Toggle Buttons Icon
-    const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
+    const toggleBtns = document.querySelectorAll('.theme-toggle-btn, #authThemeToggle');
     toggleBtns.forEach(btn => {
       const icon = btn.querySelector('i');
       if (icon) {
@@ -34,23 +38,36 @@
         }
       }
     });
+
+    if (disableTransition) {
+      // Force instant repaint then remove temporary transition lock
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          document.documentElement.classList.remove('theme-switching');
+        });
+      });
+    }
   }
 
   function toggleTheme() {
     const current = document.documentElement.getAttribute('data-theme') || 'light';
     const next = current === 'dark' ? 'light' : 'dark';
-    applyTheme(next);
+    applyTheme(next, true);
   }
 
-  // Initialize Theme on DOM ready
-  document.addEventListener('DOMContentLoaded', () => {
-    applyTheme(getSavedTheme());
+  // Apply immediately before DOM render to prevent theme flash
+  applyTheme(getSavedTheme(), false);
 
-    document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
+  // Attach click listener on DOM ready
+  document.addEventListener('DOMContentLoaded', () => {
+    applyTheme(getSavedTheme(), false);
+
+    document.addEventListener('click', (e) => {
+      const toggleBtn = e.target.closest('.theme-toggle-btn, #authThemeToggle');
+      if (toggleBtn) {
         e.preventDefault();
         toggleTheme();
-      });
+      }
     });
   });
 })();

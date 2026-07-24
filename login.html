@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark" data-bs-theme="dark" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Client Login - LumiFrame Studio</title>
-  <meta name="description" content="Access your private client portal, proofing gallery, and session downloads at LumiFrame Studio.">
+  <meta name="description"
+    content="Access your private client portal, proofing gallery, and session downloads at LumiFrame Studio.">
   <link rel="icon" type="image/png" href="assets/images/common/lumi_icon.png">
 
   <!-- Bootstrap 5 & Icons -->
@@ -30,25 +32,28 @@
   <link rel="stylesheet" href="assets/css/mobile.css">
   <link rel="stylesheet" href="assets/css/responsive-patch.css">
 </head>
+
 <body>
 
   <!-- Full-Bleed Authentication Layout -->
-  <div class="auth-wrapper" style="background-image: url('assets/images/auth/login-bg.jpg');">
+  <div class="auth-wrapper" style="background-image: url('assets/images/auth/login-bg.png');">
     <div class="auth-overlay"></div>
 
     <!-- Top-Right Theme and RTL Controls -->
     <div class="auth-top-controls">
-      <button type="button" class="icon-toggle-btn theme-toggle-btn" title="Toggle Theme" id="authThemeToggle"><i class="bi bi-moon-stars-fill"></i></button>
-      <button type="button" class="icon-toggle-btn rtl-toggle-btn" title="Toggle RTL/LTR" id="authRtlToggle"><span class="rtl-label" style="font-size:0.75rem; font-weight:700;">RTL</span></button>
+      <button type="button" class="icon-toggle-btn theme-toggle-btn" title="Toggle Theme" id="authThemeToggle"><i
+          class="bi bi-moon-stars-fill"></i></button>
+      <button type="button" class="icon-toggle-btn rtl-toggle-btn" title="Toggle RTL/LTR" id="authRtlToggle"><span
+          class="rtl-label" style="font-size:0.75rem; font-weight:700;">RTL</span></button>
     </div>
 
     <!-- Main Auth Container -->
     <div class="auth-card-container">
-      
+
       <!-- Centered Branding Above Form -->
       <div class="auth-branding">
         <a href="index.html" id="authLogoLink" class="d-inline-flex align-items-center gap-3 text-decoration-none">
-          <img src="assets/images/common/lumi_logo.png" alt="LumiFrame Studio Logo">
+          <img src="assets/images/common/lumi_logo.svg" alt="LumiFrame Studio Logo">
           <span class="font-heading fw-bold text-white fs-3">LumiFrame Studio</span>
         </a>
       </div>
@@ -61,50 +66,26 @@
         <form id="loginForm" class="needs-validation" novalidate>
           <div class="form-group mb-3">
             <label for="loginEmail" class="form-label-custom">Email Address</label>
-            <div class="input-icon-group">
-              <i class="bi bi-envelope-fill"></i>
-              <input type="email" class="form-control-custom" id="loginEmail" placeholder="client@example.com" required>
-            </div>
+            <input type="email" class="form-control-custom" id="loginEmail" placeholder="client@example.com" required>
             <div class="invalid-feedback-custom">Please enter your email.</div>
           </div>
 
           <div class="form-group mb-3">
-            <div class="d-flex justify-content-between align-items-center mb-1">
-              <label for="loginPassword" class="form-label-custom mb-0">Password</label>
-              <a href="forgot-password.html" class="text-gold text-decoration-none" style="font-size:0.8rem;">Forgot?</a>
-            </div>
-            <div class="input-icon-group">
-              <i class="bi bi-lock-fill"></i>
-              <input type="password" class="form-control-custom" id="loginPassword" placeholder="••••••••" required>
-            </div>
+            <label for="loginPassword" class="form-label-custom">Password</label>
+            <input type="password" class="form-control-custom" id="loginPassword" placeholder="••••••••" required>
             <div class="invalid-feedback-custom">Please enter your password.</div>
           </div>
 
-          <div class="form-check-custom mb-4">
-            <input type="checkbox" class="form-check-input-custom" id="rememberMe">
-            <label for="rememberMe" class="form-check-label-custom">Remember me on this browser</label>
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div class="form-check-custom mb-0">
+              <input type="checkbox" class="form-check-input-custom" id="rememberMe">
+              <label for="rememberMe" class="form-check-label-custom mb-0">Remember me</label>
+            </div>
+            <a href="forgot-password.html" class="text-gold text-decoration-none small">Forgot Password?</a>
           </div>
 
-          <button type="submit" class="btn btn-primary-gold w-100 py-3 mb-3"><i class="bi bi-box-arrow-in-right"></i> Log In To Portal</button>
+          <button type="submit" class="btn btn-primary-gold w-100 py-3 mb-3">Log In To Portal</button>
         </form>
-
-        <!-- Divider -->
-        <div class="auth-divider">
-          <span>Or sign in with</span>
-        </div>
-
-        <!-- Third-Party Login Options BELOW Form -->
-        <div class="social-login-group">
-          <button type="button" class="btn-social-login">
-            <i class="fab fa-google text-danger"></i> Continue with Google
-          </button>
-          <button type="button" class="btn-social-login">
-            <i class="fab fa-facebook text-primary"></i> Continue with Facebook
-          </button>
-          <button type="button" class="btn-social-login">
-            <i class="fab fa-apple text-light"></i> Continue with Apple
-          </button>
-        </div>
 
         <div class="auth-footer-links">
           <span>Don't have a gallery account?</span> <a href="signup.html">Sign Up</a>
@@ -119,4 +100,5 @@
   <script src="assets/js/rtl.js"></script>
   <script src="assets/js/booking.js"></script>
 </body>
+
 </html>

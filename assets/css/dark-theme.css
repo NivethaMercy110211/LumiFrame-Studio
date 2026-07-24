@@ -1,9 +1,75 @@
 /* ==========================================================================
-   LumiFrame Studio - Dark Theme Explicit Styles
-   High Contrast Obsidian & Fine-Art Gold Palette
+   LumiFrame Studio - Comprehensive Theme Controller (Light & Dark Switching)
+   Seamless, High-Contrast Color Palette Transitioning
    ========================================================================== */
 
-[data-theme="dark"], html[data-bs-theme="dark"] {
+/* ─── Light Theme Explicit Rules ─── */
+[data-theme="light"],
+html[data-bs-theme="light"] {
+  --bg-main: #FAFAFA;
+  --bg-surface: #FFFFFF;
+  --bg-surface-secondary: #F3F3F3;
+  --bg-card: #FFFFFF;
+  --bg-header: rgba(255, 255, 255, 0.95);
+  --bg-footer: #121212;
+
+  --text-main: #1C1C1C;
+  --text-muted: #555555;
+  --text-light: #888888;
+  --heading-color: #121212;
+  --border-color: #E2E2E6;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] body,
+html[data-bs-theme="light"] body {
+  background-color: var(--bg-main) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme="light"] .card-custom,
+html[data-bs-theme="light"] .card-custom {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme="light"] .brand-name,
+html[data-bs-theme="light"] .brand-name,
+[data-theme="light"] .nav-link,
+html[data-bs-theme="light"] .nav-link {
+  color: var(--heading-color) !important;
+}
+
+[data-theme="light"] .form-control-custom,
+[data-theme="light"] .form-select-custom,
+html[data-bs-theme="light"] .form-control-custom,
+html[data-bs-theme="light"] .form-select-custom {
+  background-color: #FFFFFF !important;
+  color: #121212 !important;
+  border-color: #E2E2E6 !important;
+}
+
+[data-theme="light"] .form-control-custom::placeholder,
+html[data-bs-theme="light"] .form-control-custom::placeholder {
+  color: #888888 !important;
+}
+
+[data-theme="light"] .accordion-button,
+html[data-bs-theme="light"] .accordion-button {
+  color: var(--heading-color) !important;
+  background-color: transparent !important;
+}
+
+[data-theme="light"] .site-header,
+html[data-bs-theme="light"] .site-header {
+  background-color: var(--bg-header) !important;
+  border-bottom-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ─── Dark Theme Explicit Rules ─── */
+[data-theme="dark"],
+html[data-bs-theme="dark"] {
   --bg-main: #0B0B0C;
   --bg-surface: #141416;
   --bg-surface-secondary: #1C1C1F;
@@ -13,26 +79,74 @@
 
   --text-main: #E5E5E8;
   --text-muted: #A0A0A5;
+  --text-light: #777780;
   --heading-color: #FFFFFF;
   --border-color: #28282C;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] body,
+html[data-bs-theme="dark"] body {
+  background-color: var(--bg-main) !important;
+  color: var(--text-main) !important;
 }
 
 [data-theme="dark"] .card-custom,
 html[data-bs-theme="dark"] .card-custom {
-  background-color: var(--bg-card);
-  border-color: var(--border-color);
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .brand-name,
+html[data-bs-theme="dark"] .brand-name,
+[data-theme="dark"] .nav-link,
+html[data-bs-theme="dark"] .nav-link {
+  color: var(--heading-color) !important;
 }
 
 [data-theme="dark"] .form-control-custom,
 [data-theme="dark"] .form-select-custom,
 html[data-bs-theme="dark"] .form-control-custom,
 html[data-bs-theme="dark"] .form-select-custom {
-  background-color: #121214;
-  color: #FFFFFF;
-  border-color: #2A2A30;
+  background-color: #121214 !important;
+  color: #FFFFFF !important;
+  border-color: #2A2A30 !important;
 }
 
 [data-theme="dark"] .form-control-custom::placeholder,
 html[data-bs-theme="dark"] .form-control-custom::placeholder {
-  color: #777780;
+  color: #777780 !important;
+}
+
+[data-theme="dark"] .accordion-button,
+html[data-bs-theme="dark"] .accordion-button {
+  color: #FFFFFF !important;
+  background-color: transparent !important;
+}
+
+[data-theme="dark"] .site-header,
+html[data-bs-theme="dark"] .site-header {
+  background-color: var(--bg-header) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Dark Theme Footer Bottom & Copyright Visibility */
+[data-theme="dark"] .footer-bottom,
+[data-theme="dark"] .footer-bottom p,
+html[data-bs-theme="dark"] .footer-bottom,
+html[data-bs-theme="dark"] .footer-bottom p {
+  color: #D5D5DC !important;
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .footer-bottom a,
+html[data-bs-theme="dark"] .footer-bottom a {
+  color: #B5B5C0 !important;
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .footer-bottom a:hover,
+html[data-bs-theme="dark"] .footer-bottom a:hover {
+  color: var(--primary-color) !important;
 }
