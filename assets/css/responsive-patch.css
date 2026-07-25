@@ -419,8 +419,8 @@ article,
     --bs-gutter-x: 16px !important;
     margin-left: calc(-0.5 * var(--bs-gutter-x)) !important;
     margin-right: calc(-0.5 * var(--bs-gutter-x)) !important;
-    width: calc(100% + var(--bs-gutter-x)) !important;
-    max-width: calc(100% + var(--bs-gutter-x)) !important;
+    width: auto !important;
+    max-width: none !important;
     box-sizing: border-box !important;
   }
 
@@ -651,8 +651,8 @@ html[data-bs-theme="dark"] .footer-bottom a:hover {
     --bs-gutter-x: 24px !important;
     margin-left: calc(-0.5 * var(--bs-gutter-x)) !important;
     margin-right: calc(-0.5 * var(--bs-gutter-x)) !important;
-    width: calc(100% + var(--bs-gutter-x)) !important;
-    max-width: calc(100% + var(--bs-gutter-x)) !important;
+    width: auto !important;
+    max-width: none !important;
     box-sizing: border-box !important;
   }
 
@@ -762,6 +762,7 @@ html[data-bs-theme="dark"] .footer-bottom a:hover {
 @media (min-width: 768px) and (max-width: 1366px) {
   .row-cols-md-3,
   .row-cols-lg-3,
+  .team-artist-grid,
   .testimonial-grid {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -772,6 +773,7 @@ html[data-bs-theme="dark"] .footer-bottom a:hover {
 
   .row-cols-md-3 > *,
   .row-cols-lg-3 > *,
+  .team-artist-grid > *,
   .testimonial-grid > .col,
   .testimonial-grid > [class*="col"] {
     flex: 0 0 50% !important;
@@ -785,6 +787,7 @@ html[data-bs-theme="dark"] .footer-bottom a:hover {
 
   .row-cols-md-3 .card-custom,
   .row-cols-lg-3 .card-custom,
+  .team-artist-grid .card-custom,
   .testimonial-grid .card-custom {
     display: flex !important;
     flex-direction: column !important;
@@ -1563,43 +1566,201 @@ html[data-theme="dark"] img[src*="lumi_logo"] {
     border: 1px solid #2A2A30 !important;
   }
 
-  /* ─── Universal Mobile Banner Top & Bottom Padding Refinement ─── */
-  @media (max-width: 991.98px) {
+  /* ─── Universal Mobile (360x768) & iPad Pro (1024x1366) Header & Banner Cut-off Fix ─── */
+  .site-banner {
+    overflow: visible !important;
+  }
+
+  /* iPad Pro (1024x1366) & Tablet (768px–1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
     .site-banner,
     .hero-banner,
     .inner-banner,
     .home2-editorial-banner {
-      padding-top: 110px !important;
-      padding-bottom: 70px !important;
       height: auto !important;
       min-height: auto !important;
+      padding-top: 110px !important;
+      padding-bottom: 60px !important;
+    }
+
+    .site-banner.inner-banner {
+      min-height: 240px !important;
+      padding-top: 105px !important;
+      padding-bottom: 45px !important;
+    }
+
+    .home2-hero-preview-card {
+      transform: none !important;
+      margin-top: 24px !important;
+    }
+
+    .home2-hero-preview-card img {
+      max-height: 380px !important;
+      object-fit: cover !important;
+    }
+
+    .banner-title {
+      font-size: clamp(2.2rem, 5.5vw, 3rem) !important;
+      line-height: 1.2 !important;
     }
   }
 
+  /* Mobile (360x740 & Small Phones <768px) Banner Top Clearance & Uncropped Spotlight Card Fix */
   @media (max-width: 767.98px) {
     .site-banner,
     .hero-banner,
     .inner-banner,
     .home2-editorial-banner {
-      padding-top: 115px !important;
-      padding-bottom: 75px !important;
       height: auto !important;
       min-height: auto !important;
+      padding-top: 104px !important; /* Fixed header (64px) + 40px clear space so text is never covered */
+      padding-bottom: 70px !important; /* Generous bottom spacing so preview card is never cut off */
+      background-position: center center !important;
+      background-size: cover !important;
+      overflow: visible !important;
+    }
+
+    .site-banner.inner-banner {
+      min-height: 220px !important;
+      padding-top: 100px !important;
+      padding-bottom: 45px !important;
+    }
+
+    .banner-title {
+      font-size: clamp(1.55rem, 6.8vw, 2.15rem) !important;
+      line-height: 1.25 !important;
+      margin-bottom: 12px !important;
+    }
+
+    .banner-lead {
+      font-size: 0.92rem !important;
+      line-height: 1.55 !important;
+      margin-bottom: 20px !important;
+    }
+
+    /* Secondary Spotlight Preview Card Mobile Frame */
+    .home2-hero-preview-card {
+      transform: none !important;
+      margin-top: 24px !important;
+      margin-bottom: 16px !important;
+      padding: 10px !important;
+      background: rgba(18, 18, 18, 0.9) !important;
+      border: 1px solid rgba(197, 160, 89, 0.4) !important;
+      border-radius: var(--radius-lg) !important;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7), var(--shadow-gold) !important;
+      overflow: hidden !important;
+    }
+
+    .home2-hero-preview-card img {
+      width: 100% !important;
+      height: auto !important;
+      max-height: 380px !important;
+      object-fit: cover !important;
+      object-position: top center !important; /* Keep faces and upper body perfectly framed */
+      border-radius: var(--radius-md) !important;
+      display: block !important;
+    }
+
+    .home2-hero-badge {
+      top: 18px !important;
+      right: 18px !important;
+      padding: 4px 10px !important;
+      font-size: 0.7rem !important;
+    }
+
+    .home2-hero-stats {
+      gap: 14px !important;
+      margin-top: 20px !important;
+      padding-top: 16px !important;
+    }
+
+    .banner-breadcrumb {
+      font-size: 0.75rem !important;
+      padding: 5px 14px !important;
+      margin-top: 12px !important;
     }
   }
 
-  @media (max-width: 575.98px) {
-    .site-banner,
-    .hero-banner,
-    .inner-banner,
-    .home2-editorial-banner {
-      padding-top: 120px !important;
-      padding-bottom: 80px !important;
+
+  /* ─── Visual Excellence / Portfolio Gallery Symmetrical 100% Equal Left/Right Margin Alignment ─── */
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+
+    /* Container: Centered 960px max-width on 1024x1366 with 24px side padding */
+    section.section-padding .container,
+    .portfolio-page .container {
+      width: 100% !important;
+      max-width: 960px !important;
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Center-align gallery section header */
+    .section-header {
+      text-align: center !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      width: 100% !important;
+      max-width: 760px !important;
+    }
+
+    .section-header .gold-divider {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Center-align filter bar with symmetrical margins */
+    .portfolio-filter-bar {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 10px !important;
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-bottom: 36px !important;
+      text-align: center !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Portfolio Grid Row: Exact 2-Column Symmetrical Grid Alignment */
+    #portfolioGrid {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      align-items: stretch !important;
+      --bs-gutter-x: 24px !important;
+      --bs-gutter-y: 24px !important;
+      margin-left: -12px !important;
+      margin-right: -12px !important;
+      width: calc(100% + 24px) !important;
+      max-width: calc(100% + 24px) !important;
+      box-sizing: border-box !important;
+    }
+
+    #portfolioGrid > .portfolio-item {
+      flex: 0 0 50% !important;
+      max-width: 50% !important;
+      width: 50% !important;
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+      margin-bottom: 24px !important;
+      box-sizing: border-box !important;
+    }
+
+    #portfolioGrid .portfolio-card {
+      width: 100% !important;
+      max-width: 100% !important;
       height: auto !important;
-      min-height: auto !important;
+      min-height: 0 !important;
+      aspect-ratio: 1 / 1 !important;
     }
   }
-
 
   /* ─── Zero Flicker / Zero Blinking Theme Switching Guard ─── */
   html.theme-switching,

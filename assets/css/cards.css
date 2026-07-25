@@ -306,3 +306,178 @@
   font-size: 1.75rem;
   margin-bottom: 20px;
 }
+
+/* ==========================================================================
+   Awards & Accreditations Card Alignment (Desktop, Laptop, Tablet, Mobile)
+   ========================================================================== */
+.awards-card {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 2.25rem 1.5rem !important;
+  border-radius: var(--radius-md) !important;
+  transition: transform 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+.awards-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25) !important;
+}
+
+.awards-seal-img {
+  width: 160px !important;
+  height: 160px !important;
+  max-width: 160px !important;
+  max-height: 160px !important;
+  object-fit: contain !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 1.25rem !important;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+  transition: transform 0.35s ease !important;
+}
+
+.awards-card:hover .awards-seal-img {
+  transform: scale(1.05) !important;
+}
+
+@media (max-width: 991.98px) {
+  .awards-seal-img {
+    width: 140px !important;
+    height: 140px !important;
+    max-width: 140px !important;
+    max-height: 140px !important;
+  }
+  .awards-card {
+    padding: 1.75rem 1.25rem !important;
+  }
+}
+
+/* ==========================================================================
+   Team Artist Grid - Desktop & Responsive Text Alignment
+   ========================================================================== */
+.team-artist-card {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.team-artist-card .card-body-custom {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  justify-content: flex-start !important;
+  padding: 24px 20px !important;
+}
+
+.team-artist-card .card-tag {
+  min-height: 30px;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.team-artist-card .card-title-custom {
+  margin-bottom: 10px !important;
+}
+
+.team-artist-card .card-text-custom {
+  margin-bottom: 0 !important;
+  line-height: 1.6 !important;
+  flex-grow: 1;
+}
+
+@media (min-width: 1200px) {
+  .team-artist-card .card-text-custom {
+    font-size: 0.82rem;
+    line-height: 1.55 !important;
+  }
+}
+
+/* Feature Split Section Bullet Point Alignment */
+.feature-bullet-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+  margin-top: 16px !important;
+  margin-bottom: 0 !important;
+}
+
+.feature-bullet-list li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  font-size: 0.94rem !important;
+  line-height: 1.55 !important;
+  color: var(--text-main) !important;
+}
+
+.feature-bullet-list i {
+  color: var(--primary-color) !important;
+  font-size: 1.15rem !important;
+  flex-shrink: 0 !important;
+  margin-top: 3px !important;
+}
+
+/* Blog Editorial Insight Box Styling & iPad Pro (1024x1366) Alignment */
+.blog-insight-box {
+  background: var(--bg-card) !important;
+  border: 1px solid rgba(197, 160, 89, 0.35) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem !important;
+  margin-top: 1.5rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  transition: all var(--transition-normal);
+}
+
+.blog-insight-box:hover {
+  border-color: var(--primary-color) !important;
+  box-shadow: var(--shadow-gold-sm);
+}
+
+.blog-insight-header {
+  padding-bottom: 0.75rem !important;
+  margin-bottom: 1.25rem !important;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.25) !important;
+  font-size: 1.05rem !important;
+  letter-spacing: 0.5px !important;
+}
+
+.blog-insight-box ul li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+  color: var(--text-main) !important;
+  font-size: 0.85rem !important;
+  line-height: 1.45 !important;
+}
+
+.blog-insight-box ul li i {
+  color: var(--primary-color) !important;
+  font-size: 1rem !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px !important;
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .blog-insight-box {
+    padding: 1.15rem 1.25rem !important;
+  }
+  
+  .blog-insight-box ul {
+    --bs-gutter-x: 1rem !important;
+    --bs-gutter-y: 0.75rem !important;
+  }
+
+  .blog-insight-box ul li {
+    font-size: 0.82rem !important;
+  }
+}
+
+

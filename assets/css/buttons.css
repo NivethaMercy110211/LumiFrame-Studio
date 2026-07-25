@@ -103,7 +103,7 @@ textarea:focus-visible {
   border: 1px solid var(--primary-color);
   padding: 10px 22px;
   font-size: 0.82rem;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-sm);
   min-height: 40px;
   box-shadow: var(--shadow-gold);
   transition: all var(--transition-fast);

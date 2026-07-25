@@ -92,6 +92,24 @@
     min-height: 360px;
   }
 
+  .site-banner.hero-banner.home2-editorial-banner {
+    align-items: flex-start;
+    height: auto !important;
+    min-height: auto !important;
+    padding-top: 28px !important;
+    padding-bottom: 48px !important;
+    overflow: hidden;
+  }
+
+  .home2-editorial-banner .banner-content {
+    overflow: visible;
+  }
+
+  .home2-editorial-banner .row {
+    align-items: flex-start !important;
+    row-gap: 24px !important;
+  }
+
   .site-banner.inner-banner {
     height: 230px;
     min-height: 190px;
